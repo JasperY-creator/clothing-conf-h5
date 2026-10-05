@@ -1,0 +1,1761 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#8A1F2E">
+<meta name="description" content="2026中国服装行业大会｜会后精华。10月20日，哪些观点值得带回企业？重温大会重点与嘉宾智能纪要。">
+<title>2026中国服装行业大会｜会后精华</title>
+<style>
+/* ===== 设计令牌 ===== */
+:root{
+  --blue:#1456F0;
+  --blue-soft:#E8F0FE;
+  --bg:#FFFFFF;
+  --bg-soft:#F7F8FA;
+  --text:#1F2329;
+  --text-2:#646A73;
+  --text-3:#86909C;
+  --line:#DEE0E3;
+  --red-deep:#7A1A2A;
+  --amber:#B54708;
+  --amber-bg:#FFF4E5;
+  --dark-bg:#0C0E12;
+  --dark-bg2:#101319;
+  --dark-card:#151A22;
+  --dark-line:#2A303B;
+  --dark-text:#F2F3F5;
+  --dark-text2:#A8AEB8;
+  --dark-text3:#6E7480;
+  --radius-card:12px;
+  --radius-btn:12px;
+  --shadow-card:0 1px 2px rgba(31,35,41,.04);
+  --font: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", "Helvetica Neue", Arial, sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--font);
+  color:var(--text);
+  background:var(--bg);
+  font-size:16px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%;}
+a{color:var(--blue);text-decoration:none;}
+button{font-family:inherit;border:none;background:none;cursor:pointer;color:inherit;}
+.container{max-width:720px;margin:0 auto;padding-left:20px;padding-right:20px;}
+
+/* ===== 通用 ===== */
+.section{padding:64px 0;}
+.section-head{margin-bottom:24px;}
+.section-title{font-size:26px;line-height:1.3;font-weight:600;color:var(--text);}
+.section-desc{margin-top:12px;font-size:16px;line-height:1.65;color:var(--text-2);}
+.btn-primary{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  width:100%;min-height:48px;padding:0 24px;
+  background:var(--blue);color:#fff;font-size:16px;font-weight:600;
+  border-radius:var(--radius-btn);transition:opacity .15s ease, transform .15s ease;
+}
+.btn-primary:active{opacity:.88;transform:translateY(1px);}
+.btn-primary:disabled{background:#C9CDD4;cursor:not-allowed;}
+.btn-ghost{
+  display:inline-flex;align-items:center;gap:6px;
+  min-height:44px;padding:0 6px;color:var(--blue);font-size:15px;font-weight:500;
+}
+.btn-ghost .icon-arrow{transition:transform .15s ease;}
+.btn-ghost:hover .icon-arrow{transform:translateX(3px);}
+.icon{width:20px;height:20px;flex-shrink:0;}
+
+/* ===== Section 01 首屏 ===== */
+.hero{
+  min-height:100svh;display:flex;flex-direction:column;
+  background:linear-gradient(180deg,#8A1F2E 0%,#7A1A2A 55%,#6B1324 100%);
+  color:#fff;overflow:hidden;
+}
+.hero-banner{position:relative;max-width:720px;margin:0 auto;width:100%;}
+.hero-banner img{width:100%;height:auto;display:block;}
+.hero-body{
+  position:relative;flex:1;display:flex;flex-direction:column;
+  max-width:720px;width:100%;margin:0 auto;
+  padding:32px 20px calc(env(safe-area-inset-bottom, 0px) + 36px);
+}
+.hero-title{
+  font-size:32px;line-height:1.2;font-weight:600;letter-spacing:.01em;
+  text-shadow:0 1px 12px rgba(60,10,18,.25);
+}
+.hero-desc{
+  margin-top:16px;font-size:16px;line-height:1.65;color:rgba(255,255,255,.94);
+  max-width:320px;
+}
+.hero-cta{margin-top:36px;}
+.hero-cta .btn-primary{max-width:320px;}
+.hero-link{
+  margin-top:16px;font-size:14px;color:rgba(255,255,255,.92);
+  display:inline-flex;align-items:center;gap:6px;min-height:44px;
+  border-bottom:1px solid rgba(255,255,255,.45);padding:0 2px;
+  align-self:flex-start;
+}
+.hero-spacer{flex:1;}
+.hero-footnote{
+  font-size:12px;line-height:1.6;letter-spacing:.04em;color:rgba(255,255,255,.55);
+  padding:8px 0 4px;text-align:center;
+}
+
+/* ===== Section 02 内容选择（深红底，与首屏一致） ===== */
+.content-section{
+  background:linear-gradient(180deg,#7A1A2A 0%,#5A0F1E 55%,#2E0710 100%);
+  color:#fff;
+}
+.content-section .section-title{color:#fff;font-size:24px;}
+.content-section .section-desc{color:rgba(255,255,255,.85);}
+.content-section .section-head{margin-bottom:12px;}
+.tabs{
+  position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:0;
+  background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);
+  padding:4px;border-radius:12px;margin-bottom:14px;
+}
+.tab-thumb{
+  position:absolute;top:4px;bottom:4px;left:4px;
+  width:calc((100% - 8px)/3);
+  background:var(--blue);border-radius:9px;
+  box-shadow:0 2px 10px rgba(10,40,120,.4);
+  transition:transform .28s cubic-bezier(.32,.72,.25,1);
+}
+.tab{
+  position:relative;z-index:1;min-height:42px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:15px;font-weight:500;color:rgba(255,255,255,.85);
+  border-radius:9px;white-space:nowrap;
+}
+.tab.on{color:#fff;font-weight:600;}
+.track-note{font-size:13px;color:rgba(255,255,255,.72);margin:-10px 0 10px;}
+.card{
+  background:var(--bg);border:1px solid var(--line);border-radius:var(--radius-card);
+  box-shadow:var(--shadow-card);padding:8px 12px 4px;margin-bottom:6px;
+  display:flex;flex-direction:column;gap:5px;cursor:pointer;
+  transition:border-color .15s ease, box-shadow .15s ease;
+}
+.card:active{border-color:#C5C9CE;}
+.card-title{
+  font-size:15px;line-height:1.35;font-weight:600;color:var(--text);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.card-meta{display:flex;flex-direction:column;}
+.card-speaker-line{
+  display:flex;align-items:center;gap:10px;
+  min-height:36px;padding:2px;
+  border-bottom:1px solid var(--bg-soft);cursor:pointer;
+  border-radius:8px;transition:background .12s ease;
+}
+.card-speaker-line:last-child{border-bottom:none;}
+.card-speaker-line:active{background:var(--bg-soft);}
+.sp-left{flex:1;min-width:0;display:flex;flex-direction:column;gap:0;}
+.card-speaker{font-size:14px;font-weight:500;color:var(--text);line-height:1.35;}
+.card-role{
+  font-size:12px;line-height:1.35;color:var(--text-2);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.card-speaker-link{
+  flex-shrink:0;display:inline-flex;align-items:center;gap:2px;
+  font-size:12px;font-weight:500;color:var(--blue);
+  padding:2px 0 2px 8px;min-height:38px;
+}
+.card-row{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding-top:3px;border-top:1px solid var(--line);
+}
+.card-time{display:inline-flex;align-items:center;gap:5px;font-size:12.5px;color:var(--text-2);}
+
+/* 底部衔接引导：内容区 → 飞书能力区（Section 04），占屏底部 1/3~1/4 */
+.content-bridge{margin-top:8px;padding:8px 0 56px;text-align:center;}
+.content-bridge-title{font-size:17px;line-height:1.5;font-weight:600;color:#fff;}
+.content-bridge-desc{
+  margin:6px auto 0;font-size:13px;line-height:1.5;color:rgba(255,255,255,.8);
+}
+.content-bridge .btn-primary{margin:18px auto 0;max-width:320px;}
+
+/* ===== 深色区块（Section 04—06，底图与飞书品牌KV同色系） ===== */
+.dark-section{background:var(--dark-bg);color:var(--dark-text);}
+.dark-section .section-title{color:var(--dark-text);}
+.dark-section .section-desc{color:var(--dark-text2);}
+.joint-logo{height:30px;width:auto;margin-bottom:20px;}
+.bridge-copy{
+  font-size:20px;line-height:1.5;font-weight:600;color:var(--dark-text);
+  max-width:340px;margin-bottom:24px;
+}
+.bridge-copy .bridge-kicker{
+  display:block;font-size:13px;font-weight:500;color:var(--blue);letter-spacing:.06em;
+  margin-bottom:10px;
+}
+
+/* ===== Section 04 飞书能力说明 ===== */
+.brand-top{
+  display:flex;flex-direction:column;align-items:center;gap:14px;
+  padding-top:4px;margin-bottom:32px;
+}
+.brand-joint-logo{height:36px;width:auto;display:block;}
+.brand-ribbon{width:min(600px,100%);height:auto;display:block;}
+
+/* 弹药库：产品视频 + 介绍文档（与四个能力点明确区分） */
+.ammo-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:28px;}
+.ammo{
+  background:var(--dark-card);border:1px solid var(--dark-line);border-radius:14px;
+  overflow:hidden;display:flex;flex-direction:column;cursor:pointer;
+  transition:border-color .15s ease;
+}
+.ammo:hover{border-color:#3A4250;}
+.ammo-media{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;background:#1B1F27;}
+.ammo-media::after{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(120% 120% at 50% 0%, rgba(255,255,255,.05) 0%, transparent 60%);
+}
+.ammo-ph{
+  position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:10px;color:#fff;background:linear-gradient(135deg,#24272E 0%,#2C2F36 55%,#1E2126 100%);
+}
+.ammo-ph .play-lg{
+  width:60px;height:60px;border-radius:50%;background:rgba(255,255,255,.14);
+  display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.3);
+}
+.ammo-ph .ph-label{font-size:14px;color:rgba(255,255,255,.9);letter-spacing:.04em;}
+.ammo-ph .ph-note{font-size:12px;color:rgba(255,255,255,.5);}
+.ammo-ph-doc{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,#1C212A,#232936);
+}
+.ammo-ph-doc .doc-lg{
+  width:64px;height:64px;border-radius:16px;background:rgba(255,255,255,.08);
+  display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.9);
+  border:1px solid rgba(255,255,255,.22);
+}
+.ammo-info{padding:16px;display:flex;flex-direction:column;gap:6px;}
+.ammo-title{font-size:17px;font-weight:600;color:var(--dark-text);}
+.ammo-desc{font-size:13px;line-height:1.55;color:var(--dark-text2);}
+.ammo-action{
+  display:inline-flex;align-items:center;gap:5px;min-height:44px;align-self:flex-start;
+  font-size:14px;font-weight:500;color:var(--blue);padding:0 2px;
+}
+
+/* 四个能力点（深色卡片） */
+.ability-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:32px;}
+.ability{
+  background:var(--dark-card);border:1px solid var(--dark-line);border-radius:var(--radius-card);
+  padding:16px;
+}
+.ability-icon{
+  width:40px;height:40px;border-radius:10px;background:rgba(20,86,240,.16);
+  display:flex;align-items:center;justify-content:center;color:#5B8CFF;margin-bottom:12px;
+}
+.ability-name{font-size:14px;font-weight:600;line-height:1.35;color:var(--dark-text);}
+.ability-desc{font-size:11px;line-height:1.55;color:var(--dark-text2);margin-top:6px;}
+
+/* 文档轻量入口（与能力点结合的紧凑入口） */
+.doc-entry{margin-top:14px;}
+.doc-entry-link{
+  display:flex;align-items:center;gap:12px;
+  background:var(--dark-card);border:1px solid var(--dark-line);border-radius:var(--radius-card);
+  padding:13px 16px;text-decoration:none;transition:border-color .15s ease;
+}
+.doc-entry-link:hover{border-color:#3A4250;}
+.doc-entry-icon{
+  width:38px;height:38px;border-radius:10px;flex:none;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(20,86,240,.16);color:#5B8CFF;
+}
+.doc-entry-txt{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px;}
+.doc-entry-title{font-size:15px;font-weight:600;color:var(--dark-text);line-height:1.35;}
+.doc-entry-sub{font-size:12px;color:var(--dark-text2);line-height:1.45;}
+.doc-entry-arrow{flex:none;color:#5B8CFF;display:flex;}
+
+/* 前往第四页衔接（底部留白 1/3~1/4 区域） */
+.s04-bridge{padding-top:56px;}
+/* 前往第五页（留资）衔接 */
+.s05-bridge{padding-top:48px;}
+
+/* ===== Section 05 从记录会议到推进工作 ===== */
+.brand-card-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.brand-card{
+  background:var(--dark-card);border:1px solid var(--dark-line);border-radius:var(--radius-card);
+  padding:16px;cursor:pointer;display:flex;flex-direction:column;gap:12px;
+  transition:border-color .15s ease;
+}
+.brand-card:hover{border-color:#3A4250;}
+.brand-card-title{font-size:18px;font-weight:600;color:var(--dark-text);}
+.brand-card-desc{font-size:14px;line-height:1.6;color:var(--dark-text2);}
+.video-placeholder{
+  position:relative;width:100%;aspect-ratio:16/9;border-radius:10px;overflow:hidden;
+  background:linear-gradient(135deg,#24272E 0%,#2C2F36 55%,#1E2126 100%);
+  display:flex;align-items:center;justify-content:center;color:#fff;
+}
+.video-placeholder::after{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(120% 120% at 50% 0%, rgba(255,255,255,.06) 0%, transparent 60%);
+}
+.video-ph-inner{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:10px;}
+.video-ph-play{
+  width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.14);
+  display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.28);
+}
+.video-ph-label{font-size:13px;color:rgba(255,255,255,.85);letter-spacing:.04em;}
+.video-ph-note{font-size:11px;color:rgba(255,255,255,.55);}
+
+/* ===== Section 06 带走内容并预约咨询 ===== */
+.take-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px;}
+.take{
+  background:var(--dark-card);border:1px solid var(--dark-line);border-radius:var(--radius-card);
+  padding:16px;display:flex;flex-direction:column;gap:10px;
+}
+.take-icon{
+  width:40px;height:40px;border-radius:10px;background:rgba(20,86,240,.16);
+  display:flex;align-items:center;justify-content:center;color:#5B8CFF;
+}
+.take-title{font-size:17px;font-weight:600;color:var(--dark-text);}
+.take-desc{font-size:13px;line-height:1.5;color:var(--dark-text2);flex:1;}
+.take-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  min-height:44px;padding:0 16px;margin-top:6px;align-self:flex-start;
+  border:1px solid #4A6FE0;color:#7CA3FF;font-size:14px;font-weight:500;
+  border-radius:10px;transition:background .15s ease, color .15s ease;
+}
+.take-btn:active{background:var(--blue);color:#fff;}
+
+.consult{
+  background:var(--dark-card);
+  border:1px solid var(--dark-line);border-radius:var(--radius-card);
+  padding:24px 20px;text-align:center;
+}
+.consult-title{font-size:17px;line-height:1.45;font-weight:600;color:var(--dark-text);}
+.consult-desc{margin:12px auto 0;max-width:340px;font-size:14px;line-height:1.65;color:var(--dark-text2);}
+.consult .btn-primary{margin-top:24px;max-width:320px;}
+.consult-note{margin-top:12px;font-size:13px;color:var(--dark-text3);}
+
+/* 留资 → 领取的过渡句 */
+.take-transition{
+  margin-top:34px;text-align:center;font-size:14px;color:var(--dark-text3);line-height:1.6;
+}
+
+.qr-section{margin-top:44px;display:flex;justify-content:center;gap:36px;}
+.qr-item{display:flex;flex-direction:column;align-items:center;gap:8px;}
+.qr-item img{width:96px;height:96px;border-radius:8px;border:1px solid var(--dark-line);}
+.qr-item span{font-size:12px;color:var(--dark-text3);}
+.footer-note{
+  margin-top:40px;padding-bottom:calc(env(safe-area-inset-bottom, 0px) + 32px);
+  text-align:center;font-size:12px;color:var(--dark-text3);line-height:1.6;
+}
+
+/* ===== 衔接引导条（抽屉关闭后出现） ===== */
+#bridge-chip{
+  position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom, 0px) + 20px);z-index:65;
+  transform:translateX(-50%) translateY(20px);
+  display:flex;align-items:center;gap:14px;
+  background:rgba(20,23,28,.94);border:1px solid rgba(255,255,255,.14);
+  color:#fff;border-radius:999px;padding:8px 10px 8px 18px;
+  max-width:calc(100% - 40px);
+  box-shadow:0 12px 32px rgba(16,19,23,.35);
+  opacity:0;pointer-events:none;transition:opacity .25s ease, transform .25s ease;
+}
+#bridge-chip.on{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0);}
+#bridge-chip .bc-text{font-size:13px;line-height:1.4;color:rgba(255,255,255,.92);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+#bridge-chip .bc-btn{
+  flex-shrink:0;display:inline-flex;align-items:center;gap:4px;min-height:38px;padding:0 14px;
+  background:var(--blue);color:#fff;font-size:13px;font-weight:600;border-radius:999px;
+}
+
+/* ===== 摘要抽屉（Section 03） ===== */
+#drawer-backdrop{
+  position:fixed;inset:0;z-index:80;background:rgba(16,19,23,.5);
+  opacity:0;pointer-events:none;transition:opacity .25s ease;
+}
+#drawer-backdrop.on{opacity:1;pointer-events:auto;}
+#drawer{
+  position:fixed;left:50%;bottom:0;z-index:81;
+  transform:translateX(-50%) translateY(100%);
+  width:100%;max-width:720px;
+  background:var(--bg);border-radius:16px 16px 0 0;
+  box-shadow:0 -8px 40px rgba(16,19,23,.14);
+  transition:transform .32s cubic-bezier(.32,.72,.25,1);
+  max-height:86svh;display:flex;flex-direction:column;
+}
+#drawer.on{transform:translateX(-50%) translateY(0);}
+.drawer-grab{height:20px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.drawer-grab::before{content:"";width:36px;height:4px;border-radius:2px;background:var(--line);}
+.drawer-body{overflow-y:auto;padding:4px 20px calc(env(safe-area-inset-bottom, 0px) + 20px);}
+.drawer-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding-bottom:12px;border-bottom:1px solid var(--line);}
+.drawer-close{
+  width:44px;height:44px;flex-shrink:0;border-radius:50%;color:var(--text-2);
+  display:flex;align-items:center;justify-content:center;
+  background:var(--bg-soft);margin-top:-6px;margin-right:-10px;
+}
+.drawer-chip-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:8px;}
+.drawer-track-chip{
+  font-size:12px;font-weight:500;color:var(--blue);background:var(--blue-soft);
+  padding:2px 10px;border-radius:999px;
+}
+.drawer-time{font-size:12px;color:var(--text-3);}
+.drawer-title{font-size:18px;line-height:1.4;font-weight:600;color:var(--text);}
+.drawer-meta{margin-top:6px;display:flex;flex-direction:column;gap:2px;}
+.drawer-speaker-name{font-size:15px;font-weight:600;color:var(--text);line-height:1.4;}
+.drawer-speaker-role{font-size:13px;line-height:1.5;color:var(--text-2);overflow-wrap:break-word;}
+.section-label{
+  display:flex;align-items:center;gap:8px;
+  font-size:14px;font-weight:600;color:var(--text);margin:20px 0 12px;
+}
+.section-label::before{content:"";width:4px;height:14px;border-radius:2px;background:var(--blue);}
+.drawer-note{
+  background:var(--bg-soft);border:1px dashed var(--line);border-radius:10px;
+  padding:14px;font-size:14px;line-height:1.6;color:var(--text-2);
+}
+.drawer-image-wrap{position:relative;border-radius:10px;overflow:hidden;border:1px solid var(--line);}
+.drawer-image-wrap img{width:100%;aspect-ratio:4/3;object-fit:contain;background:var(--bg-soft);}
+.drawer-image-badge{
+  position:absolute;top:10px;left:50%;transform:translateX(-50%);
+  background:rgba(20,23,28,.66);color:#fff;font-size:12px;line-height:1.4;
+  padding:4px 12px;border-radius:999px;white-space:nowrap;
+  border:1px solid rgba(255,255,255,.25);
+}
+.summary-list{display:flex;flex-direction:column;gap:10px;}
+.summary-item{
+  display:flex;gap:12px;align-items:flex-start;
+  background:var(--bg-soft);border-radius:10px;padding:14px;
+}
+.summary-num{
+  width:24px;height:24px;flex-shrink:0;border-radius:50%;
+  background:var(--blue);color:#fff;font-size:13px;font-weight:600;
+  display:flex;align-items:center;justify-content:center;margin-top:2px;
+}
+.summary-text{font-size:15px;line-height:1.6;color:var(--text);}
+.frag-list{display:flex;flex-direction:column;gap:10px;}
+.frag-item{
+  display:flex;align-items:center;gap:12px;
+  background:var(--bg-soft);border-radius:10px;padding:12px 14px;
+}
+.frag-item .frag-play{
+  width:36px;height:36px;flex-shrink:0;border-radius:50%;
+  background:var(--blue-soft);color:var(--blue);
+  display:flex;align-items:center;justify-content:center;
+}
+.frag-item.disabled .frag-play{background:#EEF0F3;color:var(--text-3);}
+.frag-item.disabled{opacity:.75;}
+.frag-info{flex:1;min-width:0;}
+.frag-title{font-size:14px;font-weight:500;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.frag-time{font-size:12px;color:var(--text-3);margin-top:2px;}
+.drawer-source{
+  margin-top:16px;display:flex;align-items:center;gap:8px;
+  font-size:13px;color:var(--text-2);
+}
+.drawer-source .src-dot{width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0;}
+.drawer-actions{margin-top:24px;display:flex;flex-direction:column;gap:6px;}
+.drawer-actions .btn-primary{min-height:48px;}
+.drawer-actions .btn-back{min-height:44px;color:var(--text-2);font-size:15px;font-weight:500;}
+
+/* ===== 视频弹层 ===== */
+#video-backdrop{
+  position:fixed;inset:0;z-index:90;background:rgba(16,19,23,.72);
+  opacity:0;pointer-events:none;transition:opacity .25s ease;
+}
+#video-backdrop.on{opacity:1;pointer-events:auto;}
+#video-modal{
+  position:fixed;left:50%;top:50%;z-index:91;
+  transform:translate(-50%,-50%) scale(.96);
+  width:calc(100% - 24px);max-width:960px;
+  background:var(--bg);border-radius:16px;overflow:hidden;
+  opacity:0;pointer-events:none;transition:opacity .2s ease, transform .2s ease;
+  box-shadow:0 20px 60px rgba(16,19,23,.3);
+}
+#video-modal.on{opacity:1;pointer-events:auto;transform:translate(-50%,-50%) scale(1);}
+.video-modal-head{
+  display:flex;justify-content:space-between;align-items:center;gap:12px;
+  padding:14px 18px;border-bottom:1px solid var(--line);
+}
+.video-modal-title{font-size:17px;font-weight:600;color:var(--text);line-height:1.4;}
+.video-modal-close{
+  width:44px;height:44px;flex-shrink:0;border-radius:50%;color:var(--text-2);
+  display:flex;align-items:center;justify-content:center;background:var(--bg-soft);
+}
+.video-modal-body{padding:14px 18px 18px;}
+.video-box{position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#17181C;}
+.video-box video{width:100%;height:100%;object-fit:contain;background:#000;}
+@media (max-width:480px){
+  #video-modal{width:calc(100% - 16px);border-radius:14px;}
+  .video-modal-head{padding:12px 14px;}
+  .video-modal-title{font-size:15px;}
+  .video-modal-body{padding:12px 14px 14px;}
+  .video-box{border-radius:10px;}
+}
+.video-ph-fill{
+  position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:12px;color:#fff;background:linear-gradient(135deg,#24272E,#1B1E23);
+}
+.video-ph-fill .play-lg{
+  width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,.14);
+  display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.3);
+}
+.video-ph-fill .vh-note{font-size:13px;color:rgba(255,255,255,.8);}
+.video-ph-fill .vh-sub{font-size:12px;color:rgba(255,255,255,.5);}
+.video-modal-foot{padding:0 20px 20px;display:flex;justify-content:center;}
+.video-modal-foot .btn-back{min-height:44px;color:var(--text-2);font-size:15px;font-weight:500;}
+
+/* 横屏全屏按钮（顶层 fixed，避免被视频原生控件遮挡点击） */
+.fs-btn{
+  position:fixed;z-index:9999;
+  width:44px;height:44px;border-radius:12px;
+  background:rgba(10,13,17,.55);color:#fff;border:1px solid rgba(255,255,255,.28);
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;
+}
+.fs-btn svg{width:20px;height:20px;}
+.fs-exit{
+  position:fixed;left:14px;top:14px;z-index:220;
+  width:44px;height:44px;border-radius:50%;
+  background:rgba(10,13,17,.65);color:#fff;border:1px solid rgba(255,255,255,.28);
+  display:none;align-items:center;justify-content:center;
+}
+.fs-exit svg{width:20px;height:20px;}
+
+/* CSS 旋转横屏全屏（桌面与移动端统一；微信/飞书等内嵌浏览器也生效） */
+video::-webkit-media-controls-fullscreen-button{display:none !important;}
+#video-modal.landscape-fs{
+  left:0;top:0;width:100vh;height:100vw;max-width:none;
+  transform:rotate(90deg) translateY(-100%);transform-origin:0 0;
+  border-radius:0;transition:transform .2s ease, opacity .2s ease;
+}
+#video-modal.landscape-fs .video-modal-head,
+#video-modal.landscape-fs .video-modal-foot{display:none;}
+#video-modal.landscape-fs .video-modal-body{padding:0;height:100%;}
+#video-modal.landscape-fs .video-box{height:100%;aspect-ratio:auto;border-radius:0;}
+
+/* ===== Toast ===== */
+#toast{
+  position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom, 0px) + 64px);z-index:120;
+  transform:translateX(-50%) translateY(16px);
+  background:rgba(20,23,28,.92);color:#fff;font-size:14px;line-height:1.5;
+  padding:10px 18px;border-radius:999px;max-width:calc(100% - 40px);text-align:center;
+  opacity:0;pointer-events:none;transition:opacity .2s ease, transform .2s ease;
+}
+#toast.on{opacity:1;transform:translateX(-50%) translateY(0);}
+
+/* ===== 标题断行均衡：避免两三个字单独成行 ===== */
+.hero-title,.section-title,.drawer-title,.consult-title,.bridge-copy,
+.ability-name,.brand-card-title,.take-title,.ammo-title,.doc-entry-title,
+.frag-title,.drawer-track-chip,label.title,label.sub{
+  text-wrap:balance;
+}
+
+/* ===== 响应式 ===== */
+@media (max-width:479px){
+  .brand-card-grid{grid-template-columns:1fr;}
+  .ability{ padding:13px 14px; }
+  .take-grid{grid-template-columns:1fr;}
+  .hero-title{font-size:29px;}
+}
+@media (min-width:760px){
+  .hero-body{padding-left:32px;padding-right:32px;}
+}
+
+/* ===== 减少动态效果 ===== */
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  *,*::before,*::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+  }
+}
+</style>
+</head>
+<body>
+
+<main>
+
+  <!-- ===== Section 01｜大会精华入口 ===== -->
+  <section class="hero" id="section-01">
+    <div class="hero-banner">
+      <img src="https://aka.doubaocdn.com/s/iYGXVKMKJP" alt="2026中国服装行业大会：品牌领航 新质跃升｜10.19—10.21 浙江·平湖" width="1381" height="550">
+    </div>
+    <div class="hero-body">
+      <h1 class="hero-title">10月20日，哪些观点值得带回企业？</h1>
+      <p class="hero-desc">用几分钟，重温大会重点与嘉宾智能纪要。</p>
+      <div class="hero-cta">
+        <button class="btn-primary" id="hero-cta" type="button">
+          查看大会精华
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="m5 12 7 7 7-7"/></svg>
+        </button>
+        <a class="hero-link" id="hero-doc-link" href="https://bytedance.larkoffice.com/docx/MFeFdsYBEoRP6sxBHDOc61egnbc">
+          完整精华文档
+          <svg class="icon" style="width:14px;height:14px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+        </a>
+      </div>
+      <div class="hero-spacer"></div>
+      <p class="hero-footnote">技术由飞书 &amp; 豆包工作提供</p>
+    </div>
+  </section>
+
+  <!-- ===== Section 02｜选择您关心的大会内容 ===== -->
+  <section class="section content-section" id="section-02" style="padding-top:30px;">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">选择您关心的大会内容</h2>
+      </div>
+      <div class="tabs" id="tabs" role="tablist" aria-label="大会内容分类">
+        <div class="tab-thumb" id="tab-thumb" aria-hidden="true"></div>
+        <button class="tab on" role="tab" aria-selected="true" data-track="trend" type="button">行业趋势</button>
+        <button class="tab" role="tab" aria-selected="false" data-track="brand" type="button">品牌增长</button>
+        <button class="tab" role="tab" aria-selected="false" data-track="manufacturing" type="button">制造升级</button>
+      </div>
+      <p class="track-note" id="track-note"></p>
+      <div id="track-cards"></div>
+
+      <!-- 底部衔接引导：对纪要感兴趣 → 进入飞书能力区 -->
+      <div class="content-bridge">
+        <h3 class="content-bridge-title">对刚才的纪要感兴趣？</h3>
+        <p class="content-bridge-desc">摘要与妙记，都来自飞书智能会议纪要</p>
+        <button class="btn-primary" id="content-bridge-cta" type="button">
+          深入了解飞书会议纪要
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Section 04｜飞书能力说明（深色） ===== -->
+  <section class="section dark-section" id="section-04">
+    <div class="container">
+      <div class="brand-top">
+        <img class="brand-joint-logo" src="https://aka.doubaocdn.com/s/GcXBREFWtt" alt="飞书 × 豆包工作联合 logo" loading="lazy" width="134" height="30">
+        <img class="brand-ribbon" src="https://aka.doubaocdn.com/s/6XAQtVNysA" alt="" aria-hidden="true" loading="lazy" width="898" height="234">
+      </div>
+      <div class="section-head">
+        <h2 class="section-title">您刚刚看到的内容，来自飞书智能会议纪要</h2>
+        <p class="section-desc">长时间分享被自动整理成重点、章节和行动信息，让会议结束后仍能被回看、搜索与复用。</p>
+      </div>
+
+      <!-- 弹药库：产品视频大卡，可直接点开观看 -->
+      <div class="ammo-grid">
+        <div class="ammo" data-video-id="product_video" role="button" aria-label="播放飞书智能会议纪要产品视频">
+          <div class="ammo-media">
+            <div class="ammo-ph" style="background-image:linear-gradient(rgba(13,16,20,.32),rgba(13,16,20,.58)),url('https://aka.doubaocdn.com/s/RiQNEEv13T');background-size:cover;background-position:center;">
+              <span class="play-lg">
+                <svg class="icon" style="width:26px;height:26px" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="m7 4 10 8-10 8V4z"/></svg>
+              </span>
+              <span class="ph-label">飞书智能会议纪要产品视频</span>
+              <span class="ph-note">60—90 秒 · 点击播放</span>
+            </div>
+          </div>
+          <div class="ammo-info">
+            <p class="ammo-title">快速了解 · 60—90 秒产品视频</p>
+            <p class="ammo-desc">看一段视频，理解摘要、章节和行动信息如何自动生成。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 文档入口：优先展示，紧接视频之后 -->
+      <div class="doc-entry">
+        <a class="doc-entry-link" id="minutes-doc-link" href="https://bytedance.larkoffice.com/wiki/TBY3w8bGgigKUmkFJh7cmYNjnag">
+          <span class="doc-entry-icon">
+            <svg class="icon" style="width:20px;height:20px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6"/><path d="M9 17h6"/></svg>
+          </span>
+          <span class="doc-entry-txt">
+            <span class="doc-entry-title">深入了解 · 产品介绍文档</span>
+            <span class="doc-entry-sub">从现场录制到内容沉淀的完整体验</span>
+          </span>
+          <span class="doc-entry-arrow">
+            <svg class="icon" style="width:16px;height:16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+          </span>
+        </a>
+      </div>
+
+      <!-- 四个能力特征：展示性内容 -->
+      <div class="ability-grid" id="ability-grid"></div>
+
+      <!-- 前往第四页衔接（底部 1/3~1/4 空间） -->
+      <div class="content-bridge s04-bridge">
+        <h3 class="content-bridge-title">想让纪要成为团队协作的一部分？</h3>
+        <p class="content-bridge-desc">看先进企业如何把会议变成行动。</p>
+        <button class="btn-primary" id="s04-bridge-cta" type="button">
+          了解飞书如何推进工作
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="m5 12 7 7 7-7"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Section 05｜从记录会议到推进工作（深色） ===== -->
+  <section class="section dark-section" id="section-05" style="padding-top:40px;">
+    <div class="container">
+      <img class="joint-logo" src="https://aka.doubaocdn.com/s/GcXBREFWtt" alt="飞书 × 豆包工作联合 logo" loading="lazy" width="134" height="30">
+      <p class="bridge-copy">
+        <span class="bridge-kicker">从纪要到协作</span>
+        记录一场会议只是开始。<br>让信息进入团队协作，让 AI 参与真实工作。
+      </p>
+      <div class="brand-card-grid">
+        <div class="brand-card" data-video-id="entrepreneur">
+          <div>
+            <p class="brand-card-title">企业为什么选择飞书</p>
+            <p class="brand-card-desc">先进企业，为何选择飞书？观看《企业家谈飞书》客户证言。</p>
+          </div>
+          <div class="video-placeholder" role="button" aria-label="播放企业家谈飞书视频">
+            <div class="video-ph-inner">
+              <span class="video-ph-play">
+                <svg class="icon" style="width:22px;height:22px" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="m7 4 10 8-10 8V4z"/></svg>
+              </span>
+              <span class="video-ph-label">企业家谈飞书</span>
+              <span class="video-ph-note">视频即将上线</span>
+            </div>
+          </div>
+        </div>
+        <div class="brand-card" data-video-id="doubao_launch">
+          <div>
+            <p class="brand-card-title">AI 如何进入真实工作</p>
+            <p class="brand-card-desc">为团队而生的 Agent，正在进入真实工作现场。</p>
+          </div>
+          <div class="video-placeholder" role="button" aria-label="播放豆包工作发布视频">
+            <div class="video-ph-inner">
+              <span class="video-ph-play">
+                <svg class="icon" style="width:22px;height:22px" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="m7 4 10 8-10 8V4z"/></svg>
+              </span>
+              <span class="video-ph-label">豆包工作发布</span>
+              <span class="video-ph-note">视频即将上线</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 前往第五页（留资）衔接：引导预约咨询 -->
+      <div class="content-bridge s05-bridge">
+        <h3 class="content-bridge-title">想把飞书带进您的企业？</h3>
+        <p class="content-bridge-desc">预约飞书顾问，获取专属 AI + 会议落地方案。</p>
+        <button class="btn-primary" id="s05-bridge-cta" type="button">
+          预约飞书顾问
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="m5 12 7 7 7-7"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Section 06｜带走内容并预约咨询（深色） ===== -->
+  <section class="section dark-section" id="section-06" style="padding-top:40px;">
+    <div class="container">
+      <img class="joint-logo" src="https://aka.doubaocdn.com/s/GcXBREFWtt" alt="飞书 × 豆包工作联合 logo" loading="lazy" width="134" height="30">
+      <div class="section-head">
+        <h2 class="section-title">带走内容并预约咨询</h2>
+        <p class="section-desc">大会精华可以带走，企业方案可以聊聊。</p>
+      </div>
+      <!-- 飞书咨询入口：优先展示 -->
+      <div class="consult">
+        <h3 class="consult-title">把大会同款智能会议纪要，带回您的企业</h3>
+        <p class="consult-desc">留下姓名、手机号和企业名称，飞书顾问将结合您的业务场景，为您定制企业专属 AI + 会议解决方案。</p>
+        <a class="btn-primary" id="consult-cta" href="https://bytedance.larkoffice.com/share/base/form/shrcn7rwSvRHzG2dA1rovkA1eMg">
+          预约飞书顾问
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+        </a>
+        <p class="consult-note">填写约30秒，飞书顾问将尽快与您联系。</p>
+      </div>
+
+      <!-- 过渡句：从咨询自然过渡到可带走内容 -->
+      <p class="take-transition">✨ 除了咨询，这些内容也可以直接带走</p>
+
+      <!-- 可带走的资料：放咨询入口之后 -->
+      <div class="take-grid">
+        <div class="take">
+          <span class="take-icon">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 12h6"/><path d="M9 16h6"/></svg>
+          </span>
+          <p class="take-title">完整大会精华</p>
+          <p class="take-desc">回看 10 月 20 日议程、摘要与完整纪要。</p>
+          <a class="take-btn" data-asset-type="highlights" href="https://bytedance.larkoffice.com/docx/MFeFdsYBEoRP6sxBHDOc61egnbc">
+            查看完整精华
+            <svg class="icon" style="width:14px;height:14px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+          </a>
+        </div>
+        <div class="take">
+          <span class="take-icon">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          </span>
+          <p class="take-title">豆包工作 Skill 礼包</p>
+          <p class="take-desc">领取可直接使用的岗位 AI Skill，带走即用。</p>
+          <a class="take-btn" data-asset-type="skill" href="https://bytedance.larkoffice.com/wiki/Ao7qwNXChi9CaskyRPdcTzZBnqh?from=from_copylink">
+            领取实用 Skill
+            <svg class="icon" style="width:14px;height:14px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="qr-section">
+        <div class="qr-item">
+          <img src="https://aka.doubaocdn.com/s/36C1UBx2EQ" alt="飞书公众号二维码" loading="lazy" width="96" height="96">
+          <span>飞书公众号</span>
+        </div>
+        <div class="qr-item">
+          <img src="https://aka.doubaocdn.com/s/pUMIAbLAy6" alt="豆包工作公众号二维码" loading="lazy" width="96" height="96">
+          <span>豆包工作公众号</span>
+        </div>
+      </div>
+
+      <p class="footer-note">内容支持：飞书智能会议纪要｜主办单位：中国服装协会</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- 衔接引导条：关闭摘要抽屉后出现，引导进入飞书能力区 -->
+<div id="bridge-chip" role="button" tabindex="0" aria-label="继续了解纪要如何生成">
+  <span class="bc-text">刚才的摘要，来自飞书智能会议纪要</span>
+  <span class="bc-btn">
+    继续了解
+    <svg class="icon" style="width:14px;height:14px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+  </span>
+</div>
+
+<!-- ===== 摘要抽屉（Section 03） ===== -->
+<div id="drawer-backdrop"></div>
+<div id="drawer" role="dialog" aria-modal="true" aria-label="演讲摘要与纪要">
+  <div class="drawer-grab"></div>
+  <div class="drawer-body" id="drawer-body">
+    <div class="drawer-head">
+      <div style="flex:1;min-width:0;">
+        <div class="drawer-chip-row">
+          <span class="drawer-track-chip" id="drawer-track"></span>
+          <span class="drawer-time" id="drawer-time"></span>
+        </div>
+        <p class="drawer-title" id="drawer-title"></p>
+        <p class="drawer-meta" id="drawer-meta"></p>
+      </div>
+      <button class="drawer-close" id="drawer-close" type="button" aria-label="关闭摘要">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </div>
+
+    <div id="drawer-summary-block"></div>
+
+    <div id="drawer-image-wrap" class="drawer-image-wrap" style="margin-top:16px;" hidden>
+      <img id="drawer-image" alt="智能纪要示意（非本次大会内容）" loading="lazy">
+      <span class="drawer-image-badge">参考样式 / 非本次大会内容</span>
+    </div>
+
+    <p class="section-label">会议妙记片段</p>
+    <div class="frag-list" id="frag-list"></div>
+
+    <p class="drawer-source"><span class="src-dot"></span>由飞书智能会议纪要生成</p>
+    <div class="drawer-actions">
+      <button class="btn-primary" id="drawer-minutes" type="button"></button>
+      <button class="btn-back" id="drawer-back" type="button">返回继续浏览</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 视频弹层 ===== -->
+<div id="video-backdrop"></div>
+<div id="video-modal" role="dialog" aria-modal="true" aria-label="视频播放">
+  <div class="video-modal-head">
+    <p class="video-modal-title" id="video-modal-title"></p>
+    <button class="video-modal-close" id="video-modal-close" type="button" aria-label="关闭视频">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+  </div>
+  <div class="video-modal-body">
+    <div class="video-box" id="video-box"></div>
+  </div>
+  <div class="video-modal-foot">
+    <button class="btn-back" id="video-modal-back" type="button">返回继续浏览</button>
+  </div>
+</div>
+
+<!-- Toast -->
+<div id="toast" role="status"></div>
+
+<!-- ===== 可替换数据文件（内置兜底副本；部署后由 h5-data.json 覆盖） ===== -->
+<script id="h5-data-fallback" type="application/json">
+{
+  "conference": {
+    "name": "2026中国服装行业大会｜会后精华",
+    "date": "10月20日",
+    "place": "浙江·平湖 圣雷克大酒店",
+    "host": "中国服装协会"
+  },
+  "links": {
+    "highlightsDoc": "https://bytedance.larkoffice.com/docx/MFeFdsYBEoRP6sxBHDOc61egnbc",
+    "skillPack": "https://bytedance.larkoffice.com/wiki/Ao7qwNXChi9CaskyRPdcTzZBnqh?from=from_copylink",
+    "consultForm": "https://bytedance.larkoffice.com/share/base/form/shrcn7rwSvRHzG2dA1rovkA1eMg",
+    "minutesIntroDoc": "https://bytedance.larkoffice.com/wiki/TBY3w8bGgigKUmkFJh7cmYNjnag",
+    "productVideoUrl": "",
+    "entrepreneurVideoUrl": "",
+    "doubaoLaunchVideoUrl": ""
+  },
+  "videos": [
+    {
+      "id": "product_video",
+      "title": "飞书智能会议纪要产品视频",
+      "duration": "60—90 秒",
+      "url": "https://aka.doubaocdn.com/s/SXiDCkdq3H",
+      "poster": "https://aka.doubaocdn.com/s/RiQNEEv13T"
+    },
+    {
+      "id": "entrepreneur",
+      "title": "《企业家谈飞书》",
+      "url": "https://aka.doubaocdn.com/s/No0i4aHcrN",
+      "poster": "https://aka.doubaocdn.com/s/l03EpjwFaV"
+    },
+    {
+      "id": "doubao_launch",
+      "title": "豆包工作发布视频",
+      "url": "https://aka.doubaocdn.com/s/6N3p2pNuzx",
+      "poster": "https://aka.doubaocdn.com/s/xezNsGG4q6"
+    }
+  ],
+  "features": [
+    {
+      "icon": "record",
+      "name": "重点不遗漏",
+      "desc": "音视频、逐字稿和发言信息集中留存，随时回看。"
+    },
+    {
+      "icon": "grab",
+      "name": "3 分钟抓重点",
+      "desc": "自动生成摘要、章节和关键结论，掌握整场内容。"
+    },
+    {
+      "icon": "search",
+      "name": "按关键词快速定位",
+      "desc": "输入关键词定位原话，不必反复拖动进度条。"
+    },
+    {
+      "icon": "flow",
+      "name": "会后知识继续流转",
+      "desc": "纪要进入文档，团队可继续评论、分享和跟进。"
+    }
+  ],
+  "footerNote": "内容支持：飞书智能会议纪要｜主办单位：中国服装协会",
+  "tracks": [
+    {
+      "id": "trend",
+      "label": "行业趋势",
+      "sub": "主论坛",
+      "sessions": [
+        {
+          "id": "session-t1",
+          "title": "2025—2026年度中国服装行业报告",
+          "speakers": [
+            {
+              "name": "陈大鹏",
+              "role": "中国纺织工业联合会副会长、中国服装协会会长",
+              "minutesUrl": "",
+              "minutesFragments": [],
+              "placeholderImage": "https://aka.doubaocdn.com/s/boQs3obXfz"
+            }
+          ],
+          "time": "09:15—09:45",
+          "summary": [
+            "正式内容将在演讲结束后更新",
+            "正式内容将在演讲结束后更新",
+            "正式内容将在演讲结束后更新"
+          ],
+          "minutesUrl": "",
+          "minutesFragments": [],
+          "placeholderImage": "https://aka.doubaocdn.com/s/boQs3obXfz"
+        },
+        {
+          "id": "session-t2",
+          "title": "品牌领航 新质跃升",
+          "speakers": [
+            {
+              "name": "赵英明",
+              "role": "长江商学院客座教授、前京东集团副总裁、前云南白药首席商务官",
+              "minutesUrl": "",
+              "minutesFragments": [],
+              "placeholderImage": "https://aka.doubaocdn.com/s/boQs3obXfz"
+            },
+            {
+              "name": "杨大筠",
+              "role": "优他国际品牌投资管理有限公司总裁",
+              "minutesUrl": "",
+              "minutesFragments": [],
+              "placeholderImage": "https://aka.doubaocdn.com/s/boQs3obXfz"
+            },
+            {
+              "name": "闻力生",
+              "role": "中国服装协会顾问、东华大学教授",
+              "minutesUrl": "",
+              "minutesFragments": [],
+              "placeholderImage": "https://aka.doubaocdn.com/s/boQs3obXfz"
+            }
+          ],
+          "time": "09:45—11:00",
+          "summary": [
+            "正式内容将在演讲结束后更新",
+            "正式内容将在演讲结束后更新",
+            "正式内容将在演讲结束后更新"
+          ],
+          "minutesUrl": "",
+          "minutesFragments": [],
+          "placeholderImage": "https://aka.doubaocdn.com/s/boQs3obXfz"
+        },
+        {
+          "id": "session-t3",
+          "title": "总结讲话",
+          "speakers": [
+            {
+              "name": "孙瑞哲",
+              "role": "中国纺织工业联合会党委书记、会长",
+              "minutesUrl": "",
+              "minutesFragments": [],
+              "placeholderImage": "https://aka.doubaocdn.com/s/boQs3obXfz"
+            }
+          ],
+          "time": "11:35—12:00",
+          "summary": [
+            "正式内容将在演讲结束后更新",
+            "正式内容将在演讲结束后更新",
+            "正式内容将在演讲结束后更新"
+          ],
+          "minutesUrl": "",
+          "minutesFragments": [],
+          "placeholderImage": "https://aka.doubaocdn.com/s/boQs3obXfz"
+        }
+      ]
+    },
+    {
+      "id": "brand",
+      "label": "品牌增长",
+      "sub": "品牌新引力",
+      "sessions": [
+        {
+          "id": "session-b1",
+          "title": "品牌新引力：从产品输出迈向文化表达",
+          "speakers": [
+            {
+              "name": "史昕",
+              "role": "广东天昕时尚科技创始人（前抖音电商服饰行业&整合营销负责人）",
+              "minutesUrl": "",
+              "minutesFragments": [],
+              "placeholderImage": "https://aka.doubaocdn.com/s/j9vLhYyuV8"
+            },
+            {
+              "name": "李晨",
+              "role": "NPC品牌创始人",
+              "minutesUrl": "",
+              "minutesFragments": [],
+              "placeholderImage": "https://aka.doubaocdn.com/s/j9vLhYyuV8"
+            },
+            {
+              "name": "刘丽娜",
+              "role": "东黎羊绒品牌总经理、主理人",
+              "minutesUrl": "",
+              "minutesFragments": [],
+              "placeholderImage": "https://aka.doubaocdn.com/s/j9vLhYyuV8"
+            },
+            {
+              "name": "郭冬麒",
+              "role": "OCTERRA等线品牌创始人",
+              "minutesUrl": "",
+              "minutesFragments": [],
+              "placeholderImage": "https://aka.doubaocdn.com/s/j9vLhYyuV8"
+            },
+            {
+              "name": "孙逸文",
+              "role": "SVG Golf总经理",
+              "minutesUrl": "",
+              "minutesFragments": [],
+              "placeholderImage": "https://aka.doubaocdn.com/s/j9vLhYyuV8"
+            },
+            {
+              "name": "周立言",
+              "role": "荷言HEYEN品牌创始人",
+              "minutesUrl": "",
+              "minutesFragments": [],
+              "placeholderImage": "https://aka.doubaocdn.com/s/j9vLhYyuV8"
+            }
+          ],
+          "time": "14:00—15:15",
+          "summary": [
+            "正式内容将在演讲结束后更新",
+            "正式内容将在演讲结束后更新",
+            "正式内容将在演讲结束后更新"
+          ],
+          "minutesUrl": "",
+          "minutesFragments": [],
+          "placeholderImage": "https://aka.doubaocdn.com/s/j9vLhYyuV8"
+        }
+      ]
+    },
+    {
+      "id": "manufacturing",
+      "label": "制造升级",
+      "sub": "制造新动力",
+      "sessions": [
+        {
+          "id": "session-m1",
+          "title": "制造新动力：从规模优势迈向精益智造",
+          "speakers": [
+            {
+              "name": "希疆",
+              "role": "希疆新零售研究院院长，著名新零售战略专家",
+              "minutesUrl": "",
+              "minutesFragments": [],
+              "placeholderImage": "https://aka.doubaocdn.com/s/bgU9S2JwOu"
+            },
+            {
+              "name": "章洁霏",
+              "role": "深圳全棉时代科技有限公司供应链高级总监",
+              "minutesUrl": "",
+              "minutesFragments": [],
+              "placeholderImage": "https://aka.doubaocdn.com/s/bgU9S2JwOu"
+            },
+            {
+              "name": "鲁小湘",
+              "role": "法良时装（上海）有限公司董事长、总经理",
+              "minutesUrl": "",
+              "minutesFragments": [],
+              "placeholderImage": "https://aka.doubaocdn.com/s/bgU9S2JwOu"
+            },
+            {
+              "name": "夏巍",
+              "role": "青岛久良服饰有限公司董事长、品牌主理人",
+              "minutesUrl": "",
+              "minutesFragments": [],
+              "placeholderImage": "https://aka.doubaocdn.com/s/bgU9S2JwOu"
+            },
+            {
+              "name": "王文丽",
+              "role": "杭州中织轻链人工智能科技有限责任公司董事长、纺织服装产业AI变革者",
+              "minutesUrl": "",
+              "minutesFragments": [],
+              "placeholderImage": "https://aka.doubaocdn.com/s/bgU9S2JwOu"
+            },
+            {
+              "name": "王春元",
+              "role": "杰克科技股份有限公司全球战略客户部专属总经理",
+              "minutesUrl": "",
+              "minutesFragments": [],
+              "placeholderImage": "https://aka.doubaocdn.com/s/bgU9S2JwOu"
+            },
+            {
+              "name": "陈杰",
+              "role": "杭州领猫信息科技有限公司创始人、CEO",
+              "minutesUrl": "",
+              "minutesFragments": [],
+              "placeholderImage": "https://aka.doubaocdn.com/s/bgU9S2JwOu"
+            }
+          ],
+          "time": "15:15—16:30",
+          "summary": [
+            "正式内容将在演讲结束后更新",
+            "正式内容将在演讲结束后更新",
+            "正式内容将在演讲结束后更新"
+          ],
+          "minutesUrl": "",
+          "minutesFragments": [],
+          "placeholderImage": "https://aka.doubaocdn.com/s/bgU9S2JwOu"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ===== 埋点适配层 ===== */
+  function trackEvent(name, payload) {
+    var data = Object.assign({ event: name, ts: Date.now() }, payload || {});
+    if (window.__h5Tracker && typeof window.__h5Tracker === 'function') {
+      try { window.__h5Tracker(data); } catch (e) { /* 埋点不阻塞页面 */ }
+    }
+    if (window.console && window.console.debug) { console.debug('[H5-track]', data); }
+  }
+
+  /* ===== 数据加载 ===== */
+  var FALLBACK_DATA = null;
+  var DATA = null;
+  try { FALLBACK_DATA = JSON.parse(document.getElementById('h5-data-fallback').textContent); } catch (e) { FALLBACK_DATA = null; }
+  DATA = FALLBACK_DATA;
+
+  function loadExternalData() {
+    if (!window.fetch) return Promise.resolve(null);
+    return fetch('h5-data.json', { cache: 'no-store' })
+      .then(function (res) { return res.ok ? res.json() : null; })
+      .catch(function () { return null; });
+  }
+
+  /* ===== 工具 ===== */
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+  function $(id) { return document.getElementById(id); }
+
+  var ICONS = {
+    clock: '<svg class="icon" style="width:14px;height:14px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>',
+    chevron: '<svg class="icon" style="width:16px;height:16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>',
+    play: '<svg class="icon" style="width:16px;height:16px" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="m7 4 10 8-10 8V4z"/></svg>',
+    record: '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5"/><circle cx="12" cy="16.5" r="0.5"/></svg>',
+    grab: '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 8h10"/><path d="M7 12h10"/><path d="M7 16h10"/></svg>',
+    search: '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>',
+    flow: '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h10"/><path d="M4 18h16"/></svg>'
+  };
+
+  /* ===== Section 02 标签与卡片 ===== */
+  var activeTrack = 'trend';
+  var tabsEl = $('tabs');
+  var thumbEl = $('tab-thumb');
+  var cardsEl = $('track-cards');
+  var trackNoteEl = $('track-note');
+
+  function currentTrack() {
+    var t = DATA && DATA.tracks ? DATA.tracks.filter(function (x) { return x.id === activeTrack; })[0] : null;
+    return t || null;
+  }
+
+  function renderTabs() {
+    var nodes = tabsEl.querySelectorAll('.tab');
+    var idx = 0;
+    for (var i = 0; i < nodes.length; i++) {
+      var on = nodes[i].getAttribute('data-track') === activeTrack;
+      nodes[i].classList.toggle('on', on);
+      nodes[i].setAttribute('aria-selected', on ? 'true' : 'false');
+      if (on) idx = i;
+    }
+    thumbEl.style.transform = 'translateX(' + (idx * 100) + '%)';
+  }
+
+  /* 兼容单嘉宾旧字段 speaker/companyRole 与多嘉宾新字段 speakers */
+  function getSpeakers(s) {
+    if (s.speakers && s.speakers.length) return s.speakers;
+    if (s.speaker) return [{ name: s.speaker, role: s.companyRole || '' }];
+    return [];
+  }
+  function speakersLabel(s) {
+    var sp = getSpeakers(s);
+    return sp.map(function (x) { return x.name; }).join('、');
+  }
+
+  function renderCards() {
+    var t = currentTrack();
+    if (!t) { cardsEl.innerHTML = ''; trackNoteEl.textContent = ''; return; }
+    trackNoteEl.textContent = '10月20日 · ' + t.sub + '（' + t.label + '）精华演讲';
+    var html = '';
+    t.sessions.forEach(function (s) {
+      var sp = getSpeakers(s);
+      var metaHtml = sp.map(function (x, i) {
+        return '<div class="card-speaker-line" data-speaker-idx="' + i + '" role="button" tabindex="0" aria-label="查看' + esc(x.name) + '的摘要与纪要">' +
+                 '<div class="sp-left"><span class="card-speaker">' + esc(x.name) + '</span>' +
+                 '<span class="card-role">' + esc(x.role) + '</span></div>' +
+                 '<span class="card-speaker-link">查看纪要' + ICONS.chevron + '</span>' +
+               '</div>';
+      }).join('');
+      html +=
+        '<article class="card" data-session-id="' + esc(s.id) + '" role="group" aria-label="' + esc(s.title + '，' + speakersLabel(s) + '，每位嘉宾独立查看纪要') + '">' +
+          '<h3 class="card-title">' + esc(s.title) + '</h3>' +
+          '<div class="card-meta">' + metaHtml + '</div>' +
+          '<div class="card-row">' +
+            '<span class="card-time">' + ICONS.clock + esc(s.time) + '</span>' +
+          '</div>' +
+        '</article>';
+    });
+    cardsEl.innerHTML = html;
+  }
+
+  tabsEl.addEventListener('click', function (e) {
+    var btn = e.target.closest('.tab');
+    if (!btn) return;
+    var track = btn.getAttribute('data-track');
+    if (track === activeTrack) return;
+    activeTrack = track;
+    renderTabs();
+    renderCards();
+    trackEvent('track_select', { track_id: activeTrack });
+  });
+
+  cardsEl.addEventListener('click', function (e) {
+    var sEl = e.target.closest('[data-session-id]');
+    if (!sEl) return;
+    var sid = sEl.getAttribute('data-session-id');
+    var spLine = e.target.closest('[data-speaker-idx]');
+    var idx = spLine ? parseInt(spLine.getAttribute('data-speaker-idx'), 10) : 0;
+    openDrawer(sid, idx);
+  });
+  cardsEl.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      var sEl = e.target.closest('[data-session-id]');
+      if (!sEl) return;
+      e.preventDefault();
+      var sid = sEl.getAttribute('data-session-id');
+      var spLine = e.target.closest('[data-speaker-idx]');
+      var idx = spLine ? parseInt(spLine.getAttribute('data-speaker-idx'), 10) : 0;
+      openDrawer(sid, idx);
+    }
+  });
+
+  /* ===== Section 03 摘要抽屉 ===== */
+  var drawer = $('drawer');
+  var drawerBackdrop = $('drawer-backdrop');
+  var drawerBody = $('drawer-body');
+  var drawerOpen = false;
+  var lastSession = null;
+  var lastSpeakerIdx = 0;
+  var drawerClosedOnce = false;
+
+  function findSession(id) {
+    if (!DATA || !DATA.tracks) return null;
+    for (var i = 0; i < DATA.tracks.length; i++) {
+      var arr = DATA.tracks[i].sessions || [];
+      for (var j = 0; j < arr.length; j++) {
+        if (arr[j].id === id) return arr[j];
+      }
+    }
+    return null;
+  }
+  function findTrackOfSession(id) {
+    if (!DATA || !DATA.tracks) return null;
+    for (var i = 0; i < DATA.tracks.length; i++) {
+      var arr = DATA.tracks[i].sessions || [];
+      for (var j = 0; j < arr.length; j++) {
+        if (arr[j].id === id) return DATA.tracks[i];
+      }
+    }
+    return null;
+  }
+
+  function lockScroll(on) {
+    document.body.style.overflow = on ? 'hidden' : '';
+  }
+
+  function openDrawer(sessionId, speakerIdx) {
+    var s = findSession(sessionId);
+    if (!s) return;
+    var sp = getSpeakers(s);
+    var idx = (typeof speakerIdx === 'number' && speakerIdx >= 0 && speakerIdx < sp.length) ? speakerIdx : 0;
+    var speaker = sp[idx] || { name: '', role: '', minutesUrl: '', minutesFragments: [], placeholderImage: '' };
+    lastSession = s;
+    lastSpeakerIdx = idx;
+    var track = findTrackOfSession(sessionId);
+    hideBridge();
+
+    $('drawer-track').textContent = (track ? track.label : '') + ' · ' + (track ? track.sub : '');
+    $('drawer-time').textContent = '10月20日 ' + s.time;
+    $('drawer-title').textContent = s.title;
+    $('drawer-meta').innerHTML =
+      '<div class="drawer-speaker-name">' + esc(speaker.name) + '</div>' +
+      '<div class="drawer-speaker-role">' + esc(speaker.role) + '</div>';
+
+    var isPlaceholder = DATA.status !== 'live';
+
+    /* 3 个重点：占位态只显示一条说明，避免重复冗长；live 态显示 3 条真实摘要 */
+    if (isPlaceholder) {
+      $('drawer-summary-block').innerHTML =
+        '<p class="section-label">3 个重点</p>' +
+        '<p class="drawer-note">正式内容将在演讲结束后更新，敬请期待。</p>';
+    } else {
+      var summary = (s.summary && s.summary.length) ? s.summary : [];
+      var html = '<p class="section-label">3 个重点</p><div class="summary-list">';
+      for (var k = 0; k < Math.min(summary.length, 3); k++) {
+        html += '<div class="summary-item"><span class="summary-num">' + (k + 1) + '</span><p class="summary-text">' + esc(summary[k]) + '</p></div>';
+      }
+      html += '</div>';
+      $('drawer-summary-block').innerHTML = html;
+    }
+
+    /* 妙记卡片：每位嘉宾独立的纪要封面（live 后逐人替换） */
+    var imgWrap = $('drawer-image-wrap');
+    var imgSrc = speaker.placeholderImage || s.placeholderImage || '';
+    if (isPlaceholder && imgSrc) {
+      imgWrap.hidden = false;
+      $('drawer-image').src = imgSrc;
+      $('drawer-image').alt = speaker.name + '的智能纪要示意（非本次大会内容）';
+    } else {
+      imgWrap.hidden = true;
+      $('drawer-image').removeAttribute('src');
+    }
+
+    /* 会议妙记片段链接：优先嘉宾级，回退场次级 */
+    var fragList = $('frag-list');
+    var fragHtml = '';
+    if (isPlaceholder) {
+      fragHtml =
+        '<div class="frag-item disabled"><span class="frag-play">' + ICONS.play + '</span><div class="frag-info"><p class="frag-title">片段将在大会后更新</p><p class="frag-time">正式纪要生成后可跳转定位</p></div></div>';
+    } else {
+      var frags = (speaker.minutesFragments && speaker.minutesFragments.length) ? speaker.minutesFragments
+                : ((s.minutesFragments && s.minutesFragments.length) ? s.minutesFragments : []);
+      if (frags.length === 0) {
+        fragHtml = '<div class="frag-item disabled"><span class="frag-play">' + ICONS.play + '</span><div class="frag-info"><p class="frag-title">暂无片段</p></div></div>';
+      } else {
+        frags.forEach(function (f, i) {
+          fragHtml +=
+            '<div class="frag-item" data-frag-index="' + i + '"><span class="frag-play">' + ICONS.play + '</span>' +
+            '<div class="frag-info"><p class="frag-title">' + esc(f.title) + '</p><p class="frag-time">' + esc(f.time || '') + '</p></div></div>';
+        });
+      }
+    }
+    fragList.innerHTML = fragHtml;
+
+    var btn = $('drawer-minutes');
+    var minutesUrl = speaker.minutesUrl || s.minutesUrl || '';
+    if (isPlaceholder || !minutesUrl) {
+      btn.disabled = false;
+      btn.textContent = '深入了解飞书智能纪要';
+    } else {
+      btn.disabled = false;
+      btn.textContent = '打开' + speaker.name + '的飞书完整纪要';
+    }
+
+    drawer.classList.add('on');
+    drawerBackdrop.classList.add('on');
+    drawerOpen = true;
+    lockScroll(true);
+    trackEvent('session_open', { session_id: s.id, speaker: speaker.name, track_id: activeTrack });
+  }
+
+  function closeDrawer() {
+    if (!drawerOpen) return;
+    drawer.classList.remove('on');
+    drawerBackdrop.classList.remove('on');
+    drawerOpen = false;
+    lockScroll(false);
+    drawerBody.scrollTop = 0;
+    if (!drawerClosedOnce) {
+      drawerClosedOnce = true;
+      showBridge();
+    }
+  }
+
+  $('drawer-close').addEventListener('click', closeDrawer);
+  $('drawer-back').addEventListener('click', closeDrawer);
+  drawerBackdrop.addEventListener('click', closeDrawer);
+
+  $('drawer-minutes').addEventListener('click', function () {
+    if (!lastSession) return;
+    var speaker = getSpeakers(lastSession)[lastSpeakerIdx] || {};
+    var minutesUrl = speaker.minutesUrl || lastSession.minutesUrl || '';
+    if (DATA.status !== 'live' || !minutesUrl) {
+      trackEvent('brand_content_click', { content_id: 'drawer_minutes_intro', content_type: 'scroll' });
+      closeDrawer();
+      smoothScrollTo($('section-04'));
+      return;
+    }
+    trackEvent('minutes_click', { session_id: lastSession.id, speaker: speaker.name, status: DATA.status });
+    window.location.href = minutesUrl;
+  });
+
+  $('frag-list').addEventListener('click', function (e) {
+    var item = e.target.closest('.frag-item');
+    if (!item || item.classList.contains('disabled') || !lastSession) return;
+    var idx = item.getAttribute('data-frag-index');
+    if (idx === null) return;
+    var speaker = getSpeakers(lastSession)[lastSpeakerIdx] || {};
+    var frags = (speaker.minutesFragments && speaker.minutesFragments.length) ? speaker.minutesFragments
+              : (lastSession.minutesFragments || []);
+    var f = frags[parseInt(idx, 10)];
+    if (!f || !f.url) { showToast('正式纪要将在大会后更新'); return; }
+    trackEvent('minutes_click', { session_id: lastSession.id, speaker: speaker.name, status: DATA.status, fragment: f.title });
+    window.location.href = f.url;
+  });
+
+  /* 下滑关闭（移动端） */
+  var dragStartY = null;
+  var dragDy = 0;
+  drawerBody.addEventListener('touchstart', function (e) {
+    if (drawerBody.scrollTop <= 0) { dragStartY = e.touches[0].clientY; dragDy = 0; }
+  }, { passive: true });
+  drawerBody.addEventListener('touchmove', function (e) {
+    if (dragStartY === null) return;
+    dragDy = e.touches[0].clientY - dragStartY;
+    if (dragDy > 0 && drawerBody.scrollTop <= 0) {
+      drawer.style.transition = 'none';
+      drawer.style.transform = 'translateX(-50%) translateY(' + Math.min(dragDy, 140) + 'px)';
+    }
+  }, { passive: true });
+  drawerBody.addEventListener('touchend', function () {
+    if (dragStartY === null) return;
+    drawer.style.transition = '';
+    drawer.style.transform = '';
+    if (dragDy > 90) closeDrawer();
+    dragStartY = null;
+    dragDy = 0;
+  });
+
+  /* ESC 关闭 */
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      if (videoOpen) { closeVideo(); return; }
+      closeDrawer();
+    }
+  });
+
+  /* ===== 衔接引导条：抽屉 → Section 04 ===== */
+  var bridgeEl = $('bridge-chip');
+  var bridgeTimer = null;
+  function showBridge() {
+    bridgeEl.classList.add('on');
+    if (bridgeTimer) clearTimeout(bridgeTimer);
+    bridgeTimer = setTimeout(hideBridge, 8000);
+  }
+  function hideBridge() {
+    bridgeEl.classList.remove('on');
+    if (bridgeTimer) { clearTimeout(bridgeTimer); bridgeTimer = null; }
+  }
+  bridgeEl.addEventListener('click', function () {
+    hideBridge();
+    trackEvent('brand_content_click', { content_id: 'bridge_to_capability', content_type: 'scroll' });
+    smoothScrollTo($('section-04'));
+  });
+  bridgeEl.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); bridgeEl.click(); }
+  });
+
+  /* ===== Section 04 能力与弹药库 ===== */
+  var abilityGrid = $('ability-grid');
+  if (DATA && DATA.features) {
+    var ahtml = '';
+    DATA.features.forEach(function (f) {
+      ahtml +=
+        '<div class="ability">' +
+          '<span class="ability-icon">' + (ICONS[f.icon] || ICONS.record) + '</span>' +
+          '<p class="ability-name">' + esc(f.name) + '</p>' +
+          '<p class="ability-desc">' + esc(f.desc) + '</p>' +
+        '</div>';
+    });
+    abilityGrid.innerHTML = ahtml;
+  }
+
+  /* 前往第四页衔接按钮 */
+  var s04BridgeBtn = $('s04-bridge-cta');
+  s04BridgeBtn.addEventListener('click', function () {
+    trackEvent('takeaway_click', { content_id: 's04_to_s05', content_type: 'scroll' });
+    smoothScrollTo($('section-05'));
+  });
+
+  /* 前往第五页（留资）衔接按钮 */
+  var s05BridgeBtn = $('s05-bridge-cta');
+  s05BridgeBtn.addEventListener('click', function () {
+    trackEvent('takeaway_click', { content_id: 's05_to_s06', content_type: 'scroll' });
+    smoothScrollTo($('section-06'));
+  });
+
+  /* 视频弹层 */
+  var videoOpen = false;
+  var fsBtnEl = null;
+  var videoModal = $('video-modal');
+  var videoBackdrop = $('video-backdrop');
+  var videoBox = $('video-box');
+
+  function findVideo(id) {
+    if (!DATA || !DATA.videos) return null;
+    for (var i = 0; i < DATA.videos.length; i++) {
+      if (DATA.videos[i].id === id) return DATA.videos[i];
+    }
+    return null;
+  }
+
+  function openVideo(id, contentType) {
+    var v = findVideo(id);
+    if (!v) return;
+    $('video-modal-title').textContent = v.title;
+    videoBox.innerHTML = '';
+    if (v.url) {
+      var video = document.createElement('video');
+      video.src = v.url;
+      video.poster = v.poster || '';
+      video.controls = true;
+      video.playsInline = true;
+      video.preload = 'metadata';
+      videoBox.appendChild(video);
+
+      /* 横屏全屏按钮（顶层 fixed 定位，避免被视频原生控件遮挡点击；移动端转横屏全屏） */
+      var fsBtn = document.createElement('button');
+      fsBtn.type = 'button';
+      fsBtn.className = 'fs-btn';
+      fsBtn.setAttribute('aria-label', '横屏全屏播放');
+      fsBtn.innerHTML = '<svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M4 9V5h4m8 0h4v4M4 15v4h4m8 0h4v-4"/></svg>';
+      document.body.appendChild(fsBtn);
+      fsBtnEl = fsBtn;
+      function placeFsBtn() {
+        if (!fsBtn || !fsBtn.isConnected) return;
+        var r = videoBox.getBoundingClientRect();
+        /* 按钮位于视频右下、原生控件栏上方 16px，避免被控件层遮挡点击 */
+        fsBtn.style.left = (r.right - 16 - 44) + 'px';
+        fsBtn.style.top = (r.bottom - 104) + 'px';
+      }
+      placeFsBtn();
+      window.addEventListener('resize', placeFsBtn);
+      fsBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        enterFullscreen(video);
+      });
+
+      var fsExit = document.createElement('button');
+      fsExit.type = 'button';
+      fsExit.className = 'fs-exit';
+      fsExit.setAttribute('aria-label', '退出全屏');
+      fsExit.innerHTML = '<svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+      fsExit.addEventListener('click', function (e) {
+        e.stopPropagation();
+        exitFullscreen();
+      });
+      document.body.appendChild(fsExit);
+
+      /* 兼容入口：原生全屏（桌面）进入时也尝试锁定横屏 */
+      video.addEventListener('fullscreenchange', function () {
+        if (document.fullscreenElement === video) {
+          if (screen.orientation && screen.orientation.lock) {
+            screen.orientation.lock('landscape').catch(function () {});
+          }
+        } else if (screen.orientation && screen.orientation.unlock) {
+          screen.orientation.unlock();
+        }
+      });
+      if (typeof video.webkitEnterFullscreen === 'function') {
+        video.addEventListener('webkitbeginfullscreen', function () {
+          if (screen.orientation && screen.orientation.lock) {
+            screen.orientation.lock('landscape').catch(function () {});
+          }
+        });
+      }
+    } else {
+      videoBox.innerHTML =
+        '<div class="video-ph-fill">' +
+          '<span class="play-lg"><svg class="icon" style="width:28px;height:28px" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="m7 4 10 8-10 8V4z"/></svg></span>' +
+          '<span class="vh-note">视频即将上线</span>' +
+          '<span class="vh-sub">当前为示意占位，正式视频素材将在上线前由业务方提供</span>' +
+        '</div>';
+    }
+    videoModal.classList.add('on');
+    videoBackdrop.classList.add('on');
+    videoOpen = true;
+    lockScroll(true);
+    /* 弹层过渡动画完成后重定位全屏按钮（避免动画前取到的位置漂移） */
+    if (fsBtnEl) {
+      placeFsBtn();
+      setTimeout(placeFsBtn, 260);
+    }
+    trackEvent('brand_content_click', { content_id: id, content_type: contentType || 'video' });
+  }
+
+  function closeVideo() {
+    if (!videoOpen) return;
+    videoModal.classList.remove('on');
+    videoBackdrop.classList.remove('on');
+    videoOpen = false;
+    lockScroll(false);
+    videoBox.innerHTML = '';
+    exitFullscreen();
+    var ex = document.querySelector('.fs-exit');
+    if (ex) ex.remove();
+    if (fsBtnEl) { fsBtnEl.remove(); fsBtnEl = null; }
+  }
+
+  /* 全屏：CSS 旋转实现横屏全屏（不依赖系统全屏 API，桌面/移动/微信/飞书内嵌浏览器统一生效） */
+  function enterFullscreen(v) {
+    videoModal.classList.add('landscape-fs');
+    var ex = document.querySelector('.fs-exit');
+    if (ex) ex.style.display = 'flex';
+    if (fsBtnEl) fsBtnEl.style.display = 'none';
+    try {
+      if (screen.orientation && screen.orientation.lock) {
+        screen.orientation.lock('landscape').catch(function () {});
+      }
+    } catch (err) {}
+    if (v && v.paused) v.play();
+  }
+
+  function exitFullscreen() {
+    videoModal.classList.remove('landscape-fs');
+    var ex = document.querySelector('.fs-exit');
+    if (ex) ex.style.display = 'none';
+    if (fsBtnEl) fsBtnEl.style.display = 'flex';
+    try {
+      if (screen.orientation && screen.orientation.unlock) screen.orientation.unlock();
+    } catch (err) {}
+  }
+
+  $('video-modal-close').addEventListener('click', closeVideo);
+  $('video-modal-back').addEventListener('click', closeVideo);
+  videoBackdrop.addEventListener('click', closeVideo);
+
+  /* Section 04 产品视频卡片 */
+  document.querySelectorAll('.ammo[data-video-id]').forEach(function (card) {
+    card.addEventListener('click', function (e) {
+      if (e.target.closest('a')) return;
+      openVideo(card.getAttribute('data-video-id'), 'video');
+    });
+  });
+  /* 介绍文档卡片 */
+  $('minutes-doc-link').addEventListener('click', function () {
+    trackEvent('brand_content_click', { content_id: 'minutes_intro_doc', content_type: 'doc' });
+  });
+
+  /* Section 05 两张品牌内容卡：有视频则展示封面并标记可播放 */
+  document.querySelectorAll('.brand-card[data-video-id]').forEach(function (card) {
+    var v = findVideo(card.getAttribute('data-video-id'));
+    var ph = card.querySelector('.video-placeholder');
+    if (v && v.url && ph) {
+      ph.style.backgroundImage = "linear-gradient(rgba(13,16,20,.30),rgba(13,16,20,.58)),url('" + v.poster + "')";
+      ph.style.backgroundSize = 'cover';
+      ph.style.backgroundPosition = 'center';
+      var note = ph.querySelector('.video-ph-note');
+      if (note) note.textContent = '点击播放';
+    }
+    card.addEventListener('click', function () {
+      openVideo(card.getAttribute('data-video-id'), 'video');
+    });
+  });
+
+  /* ===== Section 06 带走内容 / 咨询 ===== */
+  document.querySelectorAll('.take-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      trackEvent('takeaway_click', { asset_type: btn.getAttribute('data-asset-type') });
+    });
+  });
+  $('consult-cta').addEventListener('click', function () {
+    trackEvent('consult_click', { source_section: 'section_06' });
+  });
+  var successEl = null;
+
+  /* ===== 首屏 ===== */
+  $('hero-cta').addEventListener('click', function () {
+    trackEvent('hero_cta_click', { source: 'hero' });
+    smoothScrollTo($('section-02'));
+  });
+  $('hero-doc-link').addEventListener('click', function () {
+    trackEvent('hero_cta_click', { source: 'hero_doc_link' });
+  });
+
+  /* 底部衔接引导：对纪要感兴趣 → 进入飞书能力区 */
+  $('content-bridge-cta').addEventListener('click', function () {
+    trackEvent('brand_content_click', { content_id: 'content_to_capability', content_type: 'scroll' });
+    smoothScrollTo($('section-04'));
+  });
+
+  function smoothScrollTo(target) {
+    var top = target.getBoundingClientRect().top + window.pageYOffset - 12;
+    var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: top, behavior: reduced ? 'auto' : 'smooth' });
+  }
+
+  /* ===== Toast ===== */
+  var toastTimer = null;
+  function showToast(msg) {
+    var t = $('toast');
+    t.textContent = msg;
+    t.classList.add('on');
+    if (toastTimer) clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { t.classList.remove('on'); }, 2200);
+  }
+
+  /* ===== 初始化 ===== */
+  renderTabs();
+  renderCards();
+  loadExternalData().then(function (ext) {
+    if (ext && ext.tracks && ext.status) {
+      DATA = ext;
+      renderCards();
+      console.debug('[H5] 已加载外部数据文件 h5-data.json');
+    }
+  });
+})();
+</script>
+</body>
+</html>

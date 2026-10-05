@@ -1,0 +1,285 @@
+{
+  "conference": {
+    "name": "2026中国服装行业大会｜会后精华",
+    "date": "10月20日",
+    "place": "浙江·平湖 圣雷克大酒店",
+    "host": "中国服装协会"
+  },
+  "links": {
+    "highlightsDoc": "https://bytedance.larkoffice.com/docx/MFeFdsYBEoRP6sxBHDOc61egnbc",
+    "skillPack": "https://bytedance.larkoffice.com/wiki/Ao7qwNXChi9CaskyRPdcTzZBnqh?from=from_copylink",
+    "consultForm": "https://bytedance.larkoffice.com/share/base/form/shrcn7rwSvRHzG2dA1rovkA1eMg",
+    "minutesIntroDoc": "https://bytedance.larkoffice.com/wiki/TBY3w8bGgigKUmkFJh7cmYNjnag",
+    "productVideoUrl": "",
+    "entrepreneurVideoUrl": "",
+    "doubaoLaunchVideoUrl": ""
+  },
+  "videos": [
+    {
+      "id": "product_video",
+      "title": "飞书智能会议纪要产品视频",
+      "duration": "60—90 秒",
+      "url": "https://aka.doubaocdn.com/s/SXiDCkdq3H",
+      "poster": "https://aka.doubaocdn.com/s/RiQNEEv13T"
+    },
+    {
+      "id": "entrepreneur",
+      "title": "《企业家谈飞书》",
+      "url": "https://aka.doubaocdn.com/s/No0i4aHcrN",
+      "poster": "https://aka.doubaocdn.com/s/l03EpjwFaV"
+    },
+    {
+      "id": "doubao_launch",
+      "title": "豆包工作发布视频",
+      "url": "https://aka.doubaocdn.com/s/6N3p2pNuzx",
+      "poster": "https://aka.doubaocdn.com/s/xezNsGG4q6"
+    }
+  ],
+  "features": [
+    {
+      "icon": "record",
+      "name": "重点不遗漏",
+      "desc": "音视频、逐字稿和发言信息集中留存，随时回看。"
+    },
+    {
+      "icon": "grab",
+      "name": "3 分钟抓重点",
+      "desc": "自动生成摘要、章节和关键结论，掌握整场内容。"
+    },
+    {
+      "icon": "search",
+      "name": "按关键词快速定位",
+      "desc": "输入关键词定位原话，不必反复拖动进度条。"
+    },
+    {
+      "icon": "flow",
+      "name": "会后知识继续流转",
+      "desc": "纪要进入文档，团队可继续评论、分享和跟进。"
+    }
+  ],
+  "footerNote": "内容支持：飞书智能会议纪要｜主办单位：中国服装协会",
+  "tracks": [
+    {
+      "id": "trend",
+      "label": "行业趋势",
+      "sub": "主论坛",
+      "sessions": [
+        {
+          "id": "session-t1",
+          "title": "2025—2026年度中国服装行业报告",
+          "speakers": [
+            {
+              "name": "陈大鹏",
+              "role": "中国纺织工业联合会副会长、中国服装协会会长",
+              "minutesUrl": "",
+              "minutesFragments": [],
+              "placeholderImage": "https://aka.doubaocdn.com/s/boQs3obXfz"
+            }
+          ],
+          "time": "09:15—09:45",
+          "summary": [
+            "正式内容将在演讲结束后更新",
+            "正式内容将在演讲结束后更新",
+            "正式内容将在演讲结束后更新"
+          ],
+          "minutesUrl": "",
+          "minutesFragments": [],
+          "placeholderImage": "https://aka.doubaocdn.com/s/boQs3obXfz"
+        },
+        {
+          "id": "session-t2",
+          "title": "品牌领航 新质跃升",
+          "speakers": [
+            {
+              "name": "赵英明",
+              "role": "长江商学院客座教授、前京东集团副总裁、前云南白药首席商务官",
+              "minutesUrl": "",
+              "minutesFragments": [],
+              "placeholderImage": "https://aka.doubaocdn.com/s/boQs3obXfz"
+            },
+            {
+              "name": "杨大筠",
+              "role": "优他国际品牌投资管理有限公司总裁",
+              "minutesUrl": "",
+              "minutesFragments": [],
+              "placeholderImage": "https://aka.doubaocdn.com/s/boQs3obXfz"
+            },
+            {
+              "name": "闻力生",
+              "role": "中国服装协会顾问、东华大学教授",
+              "minutesUrl": "",
+              "minutesFragments": [],
+              "placeholderImage": "https://aka.doubaocdn.com/s/boQs3obXfz"
+            }
+          ],
+          "time": "09:45—11:00",
+          "summary": [
+            "正式内容将在演讲结束后更新",
+            "正式内容将在演讲结束后更新",
+            "正式内容将在演讲结束后更新"
+          ],
+          "minutesUrl": "",
+          "minutesFragments": [],
+          "placeholderImage": "https://aka.doubaocdn.com/s/boQs3obXfz"
+        },
+        {
+          "id": "session-t3",
+          "title": "总结讲话",
+          "speakers": [
+            {
+              "name": "孙瑞哲",
+              "role": "中国纺织工业联合会党委书记、会长",
+              "minutesUrl": "",
+              "minutesFragments": [],
+              "placeholderImage": "https://aka.doubaocdn.com/s/boQs3obXfz"
+            }
+          ],
+          "time": "11:35—12:00",
+          "summary": [
+            "正式内容将在演讲结束后更新",
+            "正式内容将在演讲结束后更新",
+            "正式内容将在演讲结束后更新"
+          ],
+          "minutesUrl": "",
+          "minutesFragments": [],
+          "placeholderImage": "https://aka.doubaocdn.com/s/boQs3obXfz"
+        }
+      ]
+    },
+    {
+      "id": "brand",
+      "label": "品牌增长",
+      "sub": "品牌新引力",
+      "sessions": [
+        {
+          "id": "session-b1",
+          "title": "品牌新引力：从产品输出迈向文化表达",
+          "speakers": [
+            {
+              "name": "史昕",
+              "role": "广东天昕时尚科技创始人（前抖音电商服饰行业&整合营销负责人）",
+              "minutesUrl": "",
+              "minutesFragments": [],
+              "placeholderImage": "https://aka.doubaocdn.com/s/j9vLhYyuV8"
+            },
+            {
+              "name": "李晨",
+              "role": "NPC品牌创始人",
+              "minutesUrl": "",
+              "minutesFragments": [],
+              "placeholderImage": "https://aka.doubaocdn.com/s/j9vLhYyuV8"
+            },
+            {
+              "name": "刘丽娜",
+              "role": "东黎羊绒品牌总经理、主理人",
+              "minutesUrl": "",
+              "minutesFragments": [],
+              "placeholderImage": "https://aka.doubaocdn.com/s/j9vLhYyuV8"
+            },
+            {
+              "name": "郭冬麒",
+              "role": "OCTERRA等线品牌创始人",
+              "minutesUrl": "",
+              "minutesFragments": [],
+              "placeholderImage": "https://aka.doubaocdn.com/s/j9vLhYyuV8"
+            },
+            {
+              "name": "孙逸文",
+              "role": "SVG Golf总经理",
+              "minutesUrl": "",
+              "minutesFragments": [],
+              "placeholderImage": "https://aka.doubaocdn.com/s/j9vLhYyuV8"
+            },
+            {
+              "name": "周立言",
+              "role": "荷言HEYEN品牌创始人",
+              "minutesUrl": "",
+              "minutesFragments": [],
+              "placeholderImage": "https://aka.doubaocdn.com/s/j9vLhYyuV8"
+            }
+          ],
+          "time": "14:00—15:15",
+          "summary": [
+            "正式内容将在演讲结束后更新",
+            "正式内容将在演讲结束后更新",
+            "正式内容将在演讲结束后更新"
+          ],
+          "minutesUrl": "",
+          "minutesFragments": [],
+          "placeholderImage": "https://aka.doubaocdn.com/s/j9vLhYyuV8"
+        }
+      ]
+    },
+    {
+      "id": "manufacturing",
+      "label": "制造升级",
+      "sub": "制造新动力",
+      "sessions": [
+        {
+          "id": "session-m1",
+          "title": "制造新动力：从规模优势迈向精益智造",
+          "speakers": [
+            {
+              "name": "希疆",
+              "role": "希疆新零售研究院院长，著名新零售战略专家",
+              "minutesUrl": "",
+              "minutesFragments": [],
+              "placeholderImage": "https://aka.doubaocdn.com/s/bgU9S2JwOu"
+            },
+            {
+              "name": "章洁霏",
+              "role": "深圳全棉时代科技有限公司供应链高级总监",
+              "minutesUrl": "",
+              "minutesFragments": [],
+              "placeholderImage": "https://aka.doubaocdn.com/s/bgU9S2JwOu"
+            },
+            {
+              "name": "鲁小湘",
+              "role": "法良时装（上海）有限公司董事长、总经理",
+              "minutesUrl": "",
+              "minutesFragments": [],
+              "placeholderImage": "https://aka.doubaocdn.com/s/bgU9S2JwOu"
+            },
+            {
+              "name": "夏巍",
+              "role": "青岛久良服饰有限公司董事长、品牌主理人",
+              "minutesUrl": "",
+              "minutesFragments": [],
+              "placeholderImage": "https://aka.doubaocdn.com/s/bgU9S2JwOu"
+            },
+            {
+              "name": "王文丽",
+              "role": "杭州中织轻链人工智能科技有限责任公司董事长、纺织服装产业AI变革者",
+              "minutesUrl": "",
+              "minutesFragments": [],
+              "placeholderImage": "https://aka.doubaocdn.com/s/bgU9S2JwOu"
+            },
+            {
+              "name": "王春元",
+              "role": "杰克科技股份有限公司全球战略客户部专属总经理",
+              "minutesUrl": "",
+              "minutesFragments": [],
+              "placeholderImage": "https://aka.doubaocdn.com/s/bgU9S2JwOu"
+            },
+            {
+              "name": "陈杰",
+              "role": "杭州领猫信息科技有限公司创始人、CEO",
+              "minutesUrl": "",
+              "minutesFragments": [],
+              "placeholderImage": "https://aka.doubaocdn.com/s/bgU9S2JwOu"
+            }
+          ],
+          "time": "15:15—16:30",
+          "summary": [
+            "正式内容将在演讲结束后更新",
+            "正式内容将在演讲结束后更新",
+            "正式内容将在演讲结束后更新"
+          ],
+          "minutesUrl": "",
+          "minutesFragments": [],
+          "placeholderImage": "https://aka.doubaocdn.com/s/bgU9S2JwOu"
+        }
+      ]
+    }
+  ]
+}
