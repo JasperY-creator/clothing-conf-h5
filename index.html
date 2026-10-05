@@ -318,6 +318,7 @@ button{font-family:inherit;border:none;background:none;cursor:pointer;color:inhe
   min-height:44px;padding:0 16px;margin-top:6px;align-self:flex-start;
   border:1px solid #4A6FE0;color:#7CA3FF;font-size:14px;font-weight:500;
   border-radius:10px;transition:background .15s ease, color .15s ease;
+  background:transparent;cursor:pointer;font-family:inherit;
 }
 .take-btn:active{background:var(--blue);color:#fff;}
 
@@ -344,6 +345,62 @@ button{font-family:inherit;border:none;background:none;cursor:pointer;color:inhe
   margin-top:40px;padding-bottom:calc(env(safe-area-inset-bottom, 0px) + 32px);
   text-align:center;font-size:12px;color:var(--dark-text3);line-height:1.6;
 }
+
+/* ===== Skill 领取面板 ===== */
+#skill-backdrop{
+  position:fixed;inset:0;z-index:88;background:rgba(10,13,18,.68);
+  backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);
+  opacity:0;pointer-events:none;transition:opacity .22s ease;
+}
+#skill-backdrop.on{opacity:1;pointer-events:auto;}
+#skill-modal{
+  position:fixed;left:0;right:0;bottom:0;z-index:89;
+  max-height:88vh;display:flex;flex-direction:column;
+  background:linear-gradient(180deg,#10141B 0%,#151A23 100%);
+  border-radius:22px 22px 0 0;
+  border:1px solid rgba(255,255,255,.1);
+  box-shadow:0 -16px 48px rgba(0,0,0,.45);
+  transform:translateY(104%);transition:transform .3s cubic-bezier(.32,.72,.24,1);
+}
+#skill-modal.on{transform:translateY(0);}
+.skill-grab{width:44px;height:5px;border-radius:999px;background:rgba(255,255,255,.22);margin:10px auto 2px;}
+.skill-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 18px 10px;}
+.skill-head h3{margin:0;font-size:18px;font-weight:600;color:#fff;}
+.skill-head-sub{font-size:12px;color:rgba(255,255,255,.55);margin-top:4px;}
+.skill-close{
+  flex:none;width:34px;height:34px;border-radius:10px;border:0;
+  background:rgba(255,255,255,.08);color:#fff;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+}
+.skill-list{overflow-y:auto;padding:4px 18px 28px;display:flex;flex-direction:column;gap:14px;
+  -webkit-overflow-scrolling:touch;}
+.skill-item{
+  background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);
+  border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:8px;
+}
+.skill-item-head{display:flex;align-items:flex-start;gap:10px;}
+.skill-emoji{flex:none;width:36px;height:36px;border-radius:10px;background:rgba(20,86,240,.16);
+  display:flex;align-items:center;justify-content:center;font-size:18px;}
+.skill-item-title{font-size:16px;font-weight:600;color:#fff;line-height:1.35;margin:0;}
+.skill-item-intro{font-size:13px;line-height:1.6;color:rgba(255,255,255,.72);margin:0;}
+.skill-item-points{margin:2px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:4px;}
+.skill-item-points li{position:relative;padding-left:14px;font-size:12.5px;line-height:1.55;color:rgba(255,255,255,.6);}
+.skill-item-points li::before{content:"";position:absolute;left:2px;top:7px;width:5px;height:5px;border-radius:50%;background:#5B8CFF;}
+.skill-item-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px;}
+.skill-dl-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  min-height:40px;padding:0 16px;border-radius:10px;border:0;
+  background:linear-gradient(135deg,#2456E6 0%,#3B6CFF 100%);color:#fff;
+  font-size:13.5px;font-weight:600;text-decoration:none;cursor:pointer;font-family:inherit;
+}
+.skill-doc-link{
+  display:inline-flex;align-items:center;gap:5px;
+  min-height:40px;padding:0 14px;border-radius:10px;
+  border:1px solid rgba(255,255,255,.18);color:rgba(255,255,255,.85);
+  font-size:13px;text-decoration:none;cursor:pointer;font-family:inherit;background:transparent;
+}
+.skill-modal-foot{padding:0 18px 18px;}
+.skill-modal-foot .btn-back{width:100%;}
 
 /* ===== 衔接引导条（抽屉关闭后出现） ===== */
 #bridge-chip{
@@ -775,10 +832,10 @@ video::-webkit-media-controls-fullscreen-button{display:none !important;}
           </span>
           <p class="take-title">豆包工作 Skill 礼包</p>
           <p class="take-desc">领取可直接使用的岗位 AI Skill，带走即用。</p>
-          <a class="take-btn" data-asset-type="skill" href="https://bytedance.larkoffice.com/wiki/RnzjwFPAviQbpMk6XhVcdeVwnEe">
+          <button class="take-btn" data-asset-type="skill" id="skill-take-btn" type="button">
             领取实用 Skill
             <svg class="icon" style="width:14px;height:14px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
-          </a>
+          </button>
         </div>
       </div>
 
@@ -862,6 +919,25 @@ video::-webkit-media-controls-fullscreen-button{display:none !important;}
   </div>
 </div>
 
+<!-- ===== Skill 领取面板 ===== -->
+<div id="skill-backdrop"></div>
+<div id="skill-modal" role="dialog" aria-modal="true" aria-label="豆包工作 Skill 礼包">
+  <div class="skill-grab"></div>
+  <div class="skill-head">
+    <div>
+      <h3>豆包工作 Skill 礼包</h3>
+      <p class="skill-head-sub" id="skill-head-sub"></p>
+    </div>
+    <button class="skill-close" id="skill-close" type="button" aria-label="关闭">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+  </div>
+  <div class="skill-list" id="skill-list"></div>
+  <div class="skill-modal-foot">
+    <button class="btn-back" id="skill-back" type="button">返回继续浏览</button>
+  </div>
+</div>
+
 <!-- Toast -->
 <div id="toast" role="status"></div>
 
@@ -927,6 +1003,87 @@ video::-webkit-media-controls-fullscreen-button{display:none !important;}
     }
   ],
   "footerNote": "内容支持：飞书智能会议纪要｜主办单位：中国服装协会",
+  "skills": [
+    {
+      "id": "job-ai-advisor",
+      "emoji": "🔔",
+      "title": "岗位AI化 Skill",
+      "intro": "如何将 AI 落地到自身岗位痛点：将工作步骤分为现在可执行、条件成熟可执行、AI 增强、人主导、证据不足五类，先做风险和人类责任门控再判断能力。",
+      "points": ["轻度 / 中等 / 深度三种使用模式，可随时切换", "豆包对话框输入「帮我分析岗位的 AI 化机会」或 /job-ai-advisor 触发"],
+      "zip": "https://aka.doubaocdn.com/s/5ueTPSVRuD"
+    },
+    {
+      "id": "contract-reviewer",
+      "emoji": "💡",
+      "title": "合同审核助手 Skill",
+      "intro": "基于企业合同模板与往期审核要点，自动识别合同中存在的法律风险，采用 AI 初审 + 审核人最终兜底的双重保障方式。",
+      "points": ["逐条扫描并标注风险点，不遗漏关键条款", "本地处理，数据不出端，安全可控", "采购、销售、服务、劳动等合同均可适配"],
+      "zip": "https://aka.doubaocdn.com/s/xkYohOMyMy"
+    },
+    {
+      "id": "deck-generator",
+      "emoji": "🎨",
+      "title": "AI 路演 Deck 生成 Skill",
+      "intro": "把飞书云文档和公司 Logo 交给豆包，提取品牌主色派生整套配色，逐页生成 16:9 HTML 演示 Deck，并为每一页配好可照念的演讲稿。",
+      "points": ["配色跟着品牌走，不套固定模板", "内容只来自真文档，不凭主题编造", "每页自带演讲稿，支持演讲者视图", "五道确认闸门，锁定后自动执行到交付"],
+      "doc": "https://bytedance.larkoffice.com/docx/Icutd6uX8ordM5x4jADc0sW3nyh"
+    },
+    {
+      "id": "deck-editor",
+      "emoji": "🎨",
+      "title": "Deck 自由编辑 Skill",
+      "intro": "AI 路演 Deck 生成 Skill 的配套编辑技能：把 deck.html 交给它，就能在浏览器里所见即所得地加页删页、拖拽排序、改字号配色、挪图放大，一键导出固化。",
+      "points": ["像改 PPT 一样改，全程不碰代码", "零依赖离线可用（推荐 Chrome / Edge）", "一键导出新的 deck.html，可直接交付"],
+      "doc": "https://bytedance.larkoffice.com/docx/QHuTd97eioFs4RxhomxcUCWenld"
+    },
+    {
+      "id": "mumu",
+      "emoji": "💡",
+      "title": "AI 品牌视频导演 Skill「幕幕」",
+      "intro": "一站式 AI 品牌视频制作导演工作流：用自然语言说明客户、活动与想传达的内容，整理为创意方向、完整故事、导演分镜画册、视频生成提示词与质检清单。",
+      "points": ["30 / 45 / 60 秒横版竖版均可产出", "全局动态 Handoff，多段拼接不跳戏", "Logo 与文字确定性图层合成，零差错", "电影化尾声：客户 Logo Gate、官方水印"],
+      "zip": "https://aka.doubaocdn.com/s/s4xWS622me"
+    },
+    {
+      "id": "tech-visualizer",
+      "emoji": "📊",
+      "title": "技术方案可视化 Skill（梦想实现家）",
+      "intro": "通过对话总结启发创新方案，自动提取关键方案、对比优缺点、标注推荐方案，生成专业信息图。",
+      "points": ["对话式方案提炼，对比优缺点并标注推荐", "一键生成专业信息图，降低展示门槛", "产品经理、售前、研发无需设计能力"],
+      "zip": "https://aka.doubaocdn.com/s/e8Kf2V1yNZ"
+    },
+    {
+      "id": "official-docx",
+      "emoji": "📝",
+      "title": "飞书文档转政府公文 Skill",
+      "intro": "将飞书云文档快速转换为符合政府公文标准的正式 Word 文档，自动识别关键要素并完成规范排版。",
+      "points": ["一键格式转换，无需手动调格式", "自动识别发文机关、文号、标题、主送机关等公文要素", "字体字号行距开箱即合规"],
+      "zip": "https://aka.doubaocdn.com/s/qk52EIq3df"
+    },
+    {
+      "id": "live-qc",
+      "emoji": "💡",
+      "title": "抖音矩阵号直播 AI 质检 Skill",
+      "intro": "面向电商直播合规场景：自动录制直播间片段，转为妙记逐字稿，通过 AI 质检智能体双层质检，自动生成巡检报告。",
+      "points": ["规则层 + 语义层双层质检，发现规则盲区", "单次巡检覆盖 5 个矩阵号，每店仅需 5 分钟录屏", "报告含综合评分、横向对比、整改优先级", "波司登实战：自动发现 8 项高风险、12 项中风险"],
+      "zip": "https://aka.doubaocdn.com/s/K2kV2J8zyh"
+    },
+    {
+      "id": "ppt-video",
+      "emoji": "🔔",
+      "title": "PPT视频化 Skill",
+      "intro": "让 PPT 内容不单一，根据内容生成适配的视频形式，让 PPT 内容更加生动。",
+      "zip": "https://aka.doubaocdn.com/s/SgyXhFag4h"
+    },
+    {
+      "id": "sticker-designer",
+      "emoji": "🎨",
+      "title": "企业表情包设计 Skill",
+      "intro": "专为企业文化团队打造：上传公司吉祥物或角色形象图片，一键生成完整、美观、符合飞书规范的企业表情包素材。",
+      "points": ["5 分钟即可获得全套表情", "严格保持原有形象，调性统一", "一键打包交付，管理员直接上传飞书后台"],
+      "doc": "https://bytedance.larkoffice.com/wiki/OkIwwGAq0iaiTfk5LYXcb71NnMg"
+    }
+  ],
   "tracks": [
     {
       "id": "trend",
@@ -1713,6 +1870,47 @@ video::-webkit-media-controls-fullscreen-button{display:none !important;}
     trackEvent('consult_click', { source_section: 'section_06' });
   });
   var successEl = null;
+
+  /* ===== Skill 领取面板 ===== */
+  var skillModal = $('skill-modal');
+  var skillBackdrop = $('skill-backdrop');
+  function renderSkills() {
+    var list = $('skill-list');
+    var skills = (DATA && DATA.skills && DATA.skills.length) ? DATA.skills : [];
+    $('skill-head-sub').textContent = skills.length + ' 个岗位 AI Skill，即领即用';
+    var html = '';
+    skills.forEach(function (s) {
+      html += '<div class="skill-item">';
+      html += '<div class="skill-item-head"><span class="skill-emoji">' + s.emoji + '</span><p class="skill-item-title">' + esc(s.title) + '</p></div>';
+      if (s.intro) html += '<p class="skill-item-intro">' + esc(s.intro) + '</p>';
+      if (s.points && s.points.length) {
+        html += '<ul class="skill-item-points">';
+        s.points.forEach(function (p) { html += '<li>' + esc(p) + '</li>'; });
+        html += '</ul>';
+      }
+      html += '<div class="skill-item-actions">';
+      if (s.zip) html += '<a class="skill-dl-btn" href="' + s.zip + '" target="_blank" rel="noopener">下载 Skill 包</a>';
+      if (s.doc) html += '<a class="skill-doc-link" href="' + s.doc + '" target="_blank" rel="noopener">查看使用说明</a>';
+      html += '</div></div>';
+    });
+    list.innerHTML = html;
+  }
+  function openSkillPanel() {
+    renderSkills();
+    skillModal.classList.add('on');
+    skillBackdrop.classList.add('on');
+    lockScroll(true);
+    trackEvent('takeaway_click', { asset_type: 'skill' });
+  }
+  function closeSkillPanel() {
+    skillModal.classList.remove('on');
+    skillBackdrop.classList.remove('on');
+    lockScroll(false);
+  }
+  $('skill-take-btn').addEventListener('click', openSkillPanel);
+  $('skill-close').addEventListener('click', closeSkillPanel);
+  $('skill-back').addEventListener('click', closeSkillPanel);
+  skillBackdrop.addEventListener('click', closeSkillPanel);
 
   /* ===== 首屏 ===== */
   $('hero-cta').addEventListener('click', function () {
