@@ -430,17 +430,10 @@ button{font-family:inherit;border:none;background:none;cursor:pointer;color:inhe
 .lead-head{padding:8px 18px 6px;}
 .lead-head h3{margin:0;font-size:18px;font-weight:600;color:#fff;line-height:1.4;}
 .lead-head-sub{font-size:13px;line-height:1.6;color:rgba(255,255,255,.6);margin-top:8px;}
-.lead-body{padding:14px 18px 20px;display:flex;flex-direction:column;gap:12px;}
-.lead-field{display:flex;flex-direction:column;gap:6px;}
-.lead-field label{font-size:13px;color:rgba(255,255,255,.75);}
-.lead-input{
-  width:100%;box-sizing:border-box;min-height:46px;padding:0 14px;
-  border-radius:12px;border:1px solid rgba(255,255,255,.16);
-  background:rgba(255,255,255,.06);color:#fff;font-size:15px;font-family:inherit;
-  outline:none;-webkit-appearance:none;
-}
-.lead-input:focus{border-color:#5B8CFF;}
-.lead-input::placeholder{color:rgba(255,255,255,.32);}
+.lead-body{padding:12px 18px 20px;display:flex;flex-direction:column;gap:12px;}
+.lead-form-wrap{position:relative;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.12);background:#fff;}
+.lead-iframe{width:100%;height:min(52vh,480px);border:0;display:block;background:#fff;}
+.lead-iframe-hint{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);text-align:center;font-size:12.5px;color:rgba(20,30,50,.45);padding:0 24px;pointer-events:none;z-index:0;}
 .lead-privacy{font-size:11.5px;line-height:1.6;color:rgba(255,255,255,.38);text-align:center;}
 .lead-submit{
   width:100%;min-height:48px;border:0;border-radius:12px;
@@ -449,6 +442,10 @@ button{font-family:inherit;border:none;background:none;cursor:pointer;color:inhe
   display:flex;align-items:center;justify-content:center;gap:6px;
 }
 .lead-submit:active{opacity:.88;}
+.lead-open-link{
+  text-align:center;font-size:12.5px;color:rgba(255,255,255,.5);
+  text-decoration:underline;text-underline-offset:3px;cursor:pointer;
+}
 
 /* ===== 衔接引导条（抽屉关闭后出现） ===== */
 #bridge-chip{
@@ -976,23 +973,16 @@ video::-webkit-media-controls-fullscreen-button{display:none !important;}
     <p class="lead-head-sub">为给您匹配更贴合企业场景的 AI Skill，请先填写以下信息，提交后即可查看全部 Skill。</p>
   </div>
   <div class="lead-body">
-    <div class="lead-field">
-      <label for="lead-name">姓名</label>
-      <input class="lead-input" id="lead-name" type="text" placeholder="请输入您的姓名" autocomplete="name">
-    </div>
-    <div class="lead-field">
-      <label for="lead-company">企业名称</label>
-      <input class="lead-input" id="lead-company" type="text" placeholder="请输入您的企业名称" autocomplete="organization">
-    </div>
-    <div class="lead-field">
-      <label for="lead-contact">联系方式</label>
-      <input class="lead-input" id="lead-contact" type="text" placeholder="手机号或邮箱" autocomplete="tel">
+    <div class="lead-form-wrap">
+      <iframe id="lead-iframe" class="lead-iframe" src="https://bytedance.larkoffice.com/share/base/form/shrcnS5UHT1ON53ga5sarEzGaMb" frameborder="0" scrolling="yes" title="留资表单"></iframe>
+      <div class="lead-iframe-hint">表单加载中，若无法显示，可点击下方链接在浏览器中填写</div>
     </div>
     <p class="lead-privacy">信息仅用于 Skill 服务对接，不会用于其他用途。</p>
-    <button class="lead-submit" id="lead-submit" type="button">
-      提交并查看 Skill
+    <button class="lead-submit" id="lead-unlock" type="button">
+      我已提交，查看 Skill
       <svg class="icon" style="width:16px;height:16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
     </button>
+    <a class="lead-open-link" id="lead-open-link" href="https://bytedance.larkoffice.com/share/base/form/shrcnS5UHT1ON53ga5sarEzGaMb" target="_blank" rel="noopener">无法加载表单？点此在浏览器中填写</a>
   </div>
 </div>
 
@@ -2055,27 +2045,12 @@ video::-webkit-media-controls-fullscreen-button{display:none !important;}
     leadBackdrop.classList.remove('on');
     lockScroll(false);
   }
-  function validateLead() {
-    var name = $('lead-name').value.trim();
-    var company = $('lead-company').value.trim();
-    var contact = $('lead-contact').value.trim();
-    if (!name) { showToast('请填写您的姓名'); return false; }
-    if (!company) { showToast('请填写您的企业名称'); return false; }
-    if (!contact) { showToast('请填写您的联系方式'); return false; }
-    var phoneOk = /^1[3-9]\d{9}$/.test(contact) || /^\+?[\d\s\-()]{7,20}$/.test(contact);
-    var mailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contact);
-    if (!phoneOk && !mailOk) { showToast('请输入有效的手机号或邮箱'); return false; }
-    return true;
-  }
-  function submitLead() {
-    if (!validateLead()) return;
+  function unlockSkillAfterLead() {
     try { localStorage.setItem(LEAD_KEY, '1'); } catch (e) {}
     closeLeadForm();
     openSkillPanel();
     showToast('感谢您的信任，Skill 礼包已为您准备好');
     trackEvent('skill_lead_submit', { source: 'section_06' });
-    /* 打开飞书留资表单（数据落点），客户确认提交后信息进入后台表格 */
-    window.open('https://bytedance.larkoffice.com/share/base/form/shrcnS5UHT1ON53ga5sarEzGaMb', '_blank', 'noopener');
   }
   function openSkillFlow() {
     var unlocked = false;
@@ -2087,14 +2062,16 @@ video::-webkit-media-controls-fullscreen-button{display:none !important;}
     }
   }
   $('skill-take-btn').addEventListener('click', openSkillFlow);
-  $('lead-submit').addEventListener('click', submitLead);
+  $('lead-unlock').addEventListener('click', unlockSkillAfterLead);
   leadBackdrop.addEventListener('click', closeLeadForm);
-  ['lead-name', 'lead-company', 'lead-contact'].forEach(function (id) {
-    var inp = $(id);
-    if (inp) inp.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter') { e.preventDefault(); submitLead(); }
+  /* 表单 iframe 加载完成后隐藏占位提示 */
+  var leadFrame = $('lead-iframe');
+  if (leadFrame) {
+    leadFrame.addEventListener('load', function () {
+      var hint = leadFrame.parentElement.querySelector('.lead-iframe-hint');
+      if (hint) hint.style.display = 'none';
     });
-  });
+  }
 
   /* 复制安装指令 */
   function copyTextToClipboard(txt, okMsg) {
