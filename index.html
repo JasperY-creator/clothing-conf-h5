@@ -409,44 +409,6 @@ button{font-family:inherit;border:none;background:none;cursor:pointer;color:inhe
 .skill-modal-foot{padding:0 18px 18px;}
 .skill-modal-foot .btn-back{width:100%;}
 
-/* ===== Skill 留资表单弹层 ===== */
-#lead-backdrop{
-  position:fixed;inset:0;z-index:90;background:rgba(10,13,18,.68);
-  backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);
-  opacity:0;pointer-events:none;transition:opacity .22s ease;
-}
-#lead-backdrop.on{opacity:1;pointer-events:auto;}
-#lead-modal{
-  position:fixed;left:0;right:0;bottom:0;z-index:91;
-  display:flex;flex-direction:column;
-  background:linear-gradient(180deg,#10141B 0%,#151A23 100%);
-  border-radius:22px 22px 0 0;
-  border:1px solid rgba(255,255,255,.1);
-  box-shadow:0 -16px 48px rgba(0,0,0,.45);
-  transform:translateY(104%);transition:transform .3s cubic-bezier(.32,.72,.24,1);
-}
-#lead-modal.on{transform:translateY(0);}
-.lead-grab{width:44px;height:5px;border-radius:999px;background:rgba(255,255,255,.22);margin:10px auto 2px;}
-.lead-head{padding:8px 18px 6px;}
-.lead-head h3{margin:0;font-size:18px;font-weight:600;color:#fff;line-height:1.4;}
-.lead-head-sub{font-size:13px;line-height:1.6;color:rgba(255,255,255,.6);margin-top:8px;}
-.lead-body{padding:12px 18px 20px;display:flex;flex-direction:column;gap:12px;}
-.lead-form-wrap{position:relative;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.12);background:#fff;}
-.lead-iframe{width:100%;height:min(52vh,480px);border:0;display:block;background:#fff;}
-.lead-iframe-hint{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);text-align:center;font-size:12.5px;color:rgba(20,30,50,.45);padding:0 24px;pointer-events:none;z-index:0;}
-.lead-privacy{font-size:11.5px;line-height:1.6;color:rgba(255,255,255,.38);text-align:center;}
-.lead-submit{
-  width:100%;min-height:48px;border:0;border-radius:12px;
-  background:linear-gradient(135deg,#2456E6 0%,#3B6CFF 100%);color:#fff;
-  font-size:16px;font-weight:600;cursor:pointer;font-family:inherit;
-  display:flex;align-items:center;justify-content:center;gap:6px;
-}
-.lead-submit:active{opacity:.88;}
-.lead-open-link{
-  text-align:center;font-size:12.5px;color:rgba(255,255,255,.5);
-  text-decoration:underline;text-underline-offset:3px;cursor:pointer;
-}
-
 /* ===== 衔接引导条（抽屉关闭后出现） ===== */
 #bridge-chip{
   position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom, 0px) + 20px);z-index:65;
@@ -964,29 +926,7 @@ video::-webkit-media-controls-fullscreen-button{display:none !important;}
   </div>
 </div>
 
-<!-- ===== Skill 留资表单弹层 ===== -->
-<div id="lead-backdrop"></div>
-<div id="lead-modal" role="dialog" aria-modal="true" aria-label="领取豆包工作 Skill 礼包">
-  <div class="lead-grab"></div>
-  <div class="lead-head">
-    <h3>领取豆包工作 Skill 礼包</h3>
-    <p class="lead-head-sub">为给您匹配更贴合企业场景的 AI Skill，请先填写以下信息，提交后即可查看全部 Skill。</p>
-  </div>
-  <div class="lead-body">
-    <div class="lead-form-wrap">
-      <iframe id="lead-iframe" class="lead-iframe" src="https://bytedance.larkoffice.com/share/base/form/shrcnS5UHT1ON53ga5sarEzGaMb" frameborder="0" scrolling="yes" title="留资表单"></iframe>
-      <div class="lead-iframe-hint">表单加载中，若无法显示，可点击下方链接在浏览器中填写</div>
-    </div>
-    <p class="lead-privacy">信息仅用于 Skill 服务对接，不会用于其他用途。</p>
-    <button class="lead-submit" id="lead-unlock" type="button">
-      我已提交，查看 Skill
-      <svg class="icon" style="width:16px;height:16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
-    </button>
-    <a class="lead-open-link" id="lead-open-link" href="https://bytedance.larkoffice.com/share/base/form/shrcnS5UHT1ON53ga5sarEzGaMb" target="_blank" rel="noopener">无法加载表单？点此在浏览器中填写</a>
-  </div>
-</div>
-
-<!-- ===== Skill 领取面板 ===== -->
+<!-- ===== Skill 领取面板（点击“领取实用 Skill”直接打开，无需留资） ===== -->
 <div id="skill-backdrop"></div>
 <div id="skill-modal" role="dialog" aria-modal="true" aria-label="豆包工作 Skill 礼包">
   <div class="skill-grab"></div>
@@ -2031,47 +1971,12 @@ video::-webkit-media-controls-fullscreen-button{display:none !important;}
   $('skill-back').addEventListener('click', closeSkillPanel);
   skillBackdrop.addEventListener('click', closeSkillPanel);
 
-  /* ===== Skill 留资表单（提交后解锁） ===== */
-  var leadModal = $('lead-modal');
-  var leadBackdrop = $('lead-backdrop');
-  var LEAD_KEY = 'skill-lead-unlocked';
-  function openLeadForm() {
-    leadModal.classList.add('on');
-    leadBackdrop.classList.add('on');
-    lockScroll(true);
-  }
-  function closeLeadForm() {
-    leadModal.classList.remove('on');
-    leadBackdrop.classList.remove('on');
-    lockScroll(false);
-  }
-  function unlockSkillAfterLead() {
-    try { localStorage.setItem(LEAD_KEY, '1'); } catch (e) {}
-    closeLeadForm();
-    openSkillPanel();
-    showToast('感谢您的信任，Skill 礼包已为您准备好');
-    trackEvent('skill_lead_submit', { source: 'section_06' });
-  }
+  /* ===== Skill 领取（直接打开面板，无需留资） ===== */
   function openSkillFlow() {
-    var unlocked = false;
-    try { unlocked = localStorage.getItem(LEAD_KEY) === '1'; } catch (e) {}
-    if (unlocked) {
-      openSkillPanel();
-    } else {
-      openLeadForm();
-    }
+    openSkillPanel();
+    trackEvent('skill_take', { source: 'section_06' });
   }
   $('skill-take-btn').addEventListener('click', openSkillFlow);
-  $('lead-unlock').addEventListener('click', unlockSkillAfterLead);
-  leadBackdrop.addEventListener('click', closeLeadForm);
-  /* 表单 iframe 加载完成后隐藏占位提示 */
-  var leadFrame = $('lead-iframe');
-  if (leadFrame) {
-    leadFrame.addEventListener('load', function () {
-      var hint = leadFrame.parentElement.querySelector('.lead-iframe-hint');
-      if (hint) hint.style.display = 'none';
-    });
-  }
 
   /* 复制安装指令 */
   function copyTextToClipboard(txt, okMsg) {
