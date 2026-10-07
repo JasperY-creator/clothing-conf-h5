@@ -1971,10 +1971,19 @@ video::-webkit-media-controls-fullscreen-button{display:none !important;}
   $('skill-back').addEventListener('click', closeSkillPanel);
   skillBackdrop.addEventListener('click', closeSkillPanel);
 
-  /* ===== Skill 领取（直接打开面板，无需留资） ===== */
+  /* ===== Skill 领取（未解锁 → 跳转留资表单；已解锁 → 直接打开面板） ===== */
+  var LEAD_KEY = 'skill-lead-unlocked';
+  var LEAD_FORM_URL = 'https://bytedance.larkoffice.com/share/base/form/shrcnggyVnoXQTT2C7iQ3Y7c57c';
+  function isSkillUnlocked() {
+    try { return localStorage.getItem(LEAD_KEY) === '1'; } catch (e) { return false; }
+  }
   function openSkillFlow() {
-    openSkillPanel();
     trackEvent('skill_take', { source: 'section_06' });
+    if (isSkillUnlocked()) {
+      openSkillPanel();
+    } else {
+      window.location.href = LEAD_FORM_URL;
+    }
   }
   $('skill-take-btn').addEventListener('click', openSkillFlow);
 
@@ -2035,6 +2044,21 @@ video::-webkit-media-controls-fullscreen-button{display:none !important;}
     if (toastTimer) clearTimeout(toastTimer);
     toastTimer = setTimeout(function () { t.classList.remove('on'); }, 2200);
   }
+
+  /* ===== 从留资表单提交后回跳解锁 ===== */
+  (function () {
+    try {
+      var p = new URLSearchParams(window.location.search);
+      if (p.get('skill') === 'unlocked') {
+        localStorage.setItem(LEAD_KEY, '1');
+        setTimeout(function () {
+          openSkillPanel();
+          showToast('感谢您的信任，Skill 礼包已为您准备好');
+        }, 400);
+        history.replaceState(null, '', window.location.pathname + window.location.hash);
+      }
+    } catch (e) {}
+  })();
 
   /* ===== 初始化 ===== */
   renderTabs();
