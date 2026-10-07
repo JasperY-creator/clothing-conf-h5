@@ -1942,6 +1942,7 @@ video::-webkit-media-controls-fullscreen-button{display:none !important;}
       }
       html += '<div class="skill-item-actions">';
       if (s.zip) html += '<a class="skill-dl-btn" href="' + s.zip + '" download>下载 Skill 包</a>';
+      html += '<a class="skill-doc-link" href="' + FULL_SKILL_DOC + '" target="_blank" rel="noopener">查看完整文档</a>';
       if (s.doc) html += '<a class="skill-doc-link" href="' + s.doc + '" target="_blank" rel="noopener">查看使用说明</a>';
       html += '</div></div>';
     });
@@ -1966,6 +1967,7 @@ video::-webkit-media-controls-fullscreen-button{display:none !important;}
   /* ===== Skill 领取（未解锁 → 跳转留资表单；已解锁 → 直接打开面板） ===== */
   var LEAD_KEY = 'skill-lead-unlocked';
   var LEAD_FORM_URL = 'https://bytedance.larkoffice.com/share/base/form/shrcnggyVnoXQTT2C7iQ3Y7c57c';
+  var FULL_SKILL_DOC = 'https://bytedance.larkoffice.com/wiki/RnzjwFPAviQbpMk6XhVcdeVwnEe?from=from_copylink';
   function isSkillUnlocked() {
     try { return localStorage.getItem(LEAD_KEY) === '1'; } catch (e) { return false; }
   }
