@@ -399,13 +399,6 @@ button{font-family:inherit;border:none;background:none;cursor:pointer;color:inhe
   border:1px solid rgba(255,255,255,.18);color:rgba(255,255,255,.85);
   font-size:13px;text-decoration:none;cursor:pointer;font-family:inherit;background:transparent;
 }
-.skill-install-btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:6px;
-  min-height:40px;padding:0 14px;border-radius:10px;
-  border:1px solid rgba(91,140,255,.55);color:#8FB2FF;
-  font-size:13px;font-weight:500;cursor:pointer;font-family:inherit;background:rgba(20,86,240,.10);
-}
-.skill-install-btn:active{background:rgba(20,86,240,.28);}
 .skill-modal-foot{padding:0 18px 18px;}
 .skill-modal-foot .btn-back{width:100%;}
 
@@ -1949,7 +1942,6 @@ video::-webkit-media-controls-fullscreen-button{display:none !important;}
       }
       html += '<div class="skill-item-actions">';
       if (s.zip) html += '<a class="skill-dl-btn" href="' + s.zip + '" download>下载 Skill 包</a>';
-      if (s.installText) html += '<button class="skill-install-btn" type="button" data-install="' + esc(s.installText) + '">复制安装指令</button>';
       if (s.doc) html += '<a class="skill-doc-link" href="' + s.doc + '" target="_blank" rel="noopener">查看使用说明</a>';
       html += '</div></div>';
     });
@@ -1986,33 +1978,6 @@ video::-webkit-media-controls-fullscreen-button{display:none !important;}
     }
   }
   $('skill-take-btn').addEventListener('click', openSkillFlow);
-
-  /* 复制安装指令 */
-  function copyTextToClipboard(txt, okMsg) {
-    function done() { showToast(okMsg); }
-    function fallback(t) {
-      var ta = document.createElement('textarea');
-      ta.value = t;
-      ta.style.position = 'fixed';
-      ta.style.opacity = '0';
-      document.body.appendChild(ta);
-      ta.select();
-      try { document.execCommand('copy'); done(); } catch (err) { showToast('复制失败，请长按按钮文字手动复制'); }
-      document.body.removeChild(ta);
-    }
-    if (navigator.clipboard && window.isSecureContext) {
-      navigator.clipboard.writeText(txt).then(done, function () { fallback(txt); });
-    } else {
-      fallback(txt);
-    }
-  }
-  $('skill-list').addEventListener('click', function (e) {
-    var b = e.target.closest('.skill-install-btn');
-    if (!b) return;
-    var txt = b.getAttribute('data-install') || '';
-    if (!txt) return;
-    copyTextToClipboard(txt, '安装指令已复制，去豆包对话粘贴即可');
-  });
 
   /* ===== 首屏 ===== */
   $('hero-cta').addEventListener('click', function () {
