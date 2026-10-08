@@ -1383,7 +1383,7 @@ video::-webkit-media-controls-fullscreen-button{display:none !important;}
 
   function loadExternalData() {
     if (!window.fetch) return Promise.resolve(null);
-    return fetch('h5-data.json', { cache: 'no-store' })
+    return fetch('h5-data.json?t=' + Date.now(), { cache: 'no-store' })
       .then(function (res) { return res.ok ? res.json() : null; })
       .catch(function () { return null; });
   }
