@@ -204,16 +204,16 @@
             {
               "name": "陈大鹏",
               "role": "中国纺织工业联合会副会长、中国服装协会会长",
-              "minutesUrl": "",
+              "minutesUrl": "https://bytedance.larkoffice.com/minutes/obcntupwyb82ftc4fhl9rqpn",
               "minutesFragments": [],
               "placeholderImage": "https://aka.doubaocdn.com/s/boQs3obXfz"
             }
           ],
           "time": "09:15—09:45",
           "summary": [
-            "正式内容将在演讲结束后更新",
-            "正式内容将在演讲结束后更新",
-            "正式内容将在演讲结束后更新"
+            "围绕服装纺织行业 AI 落地峰会筹备展开沟通，征集可对外宣传的行业标杆案例",
+            "拟邀请企业客户、行业协会专家、飞书案例团队及行业 KOL 四类嘉宾站台分享",
+            "活动形式初步确定为主题演讲、标杆案例分享与圆桌共创，规模 100-150 人"
           ],
           "minutesUrl": "",
           "minutesFragments": [],
@@ -414,5 +414,6 @@
         }
       ]
     }
-  ]
+  ],
+  "status": "live"
 }
