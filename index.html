@@ -488,6 +488,20 @@ button{font-family:inherit;border:none;background:none;cursor:pointer;color:inhe
   background:linear-gradient(135deg,rgba(36,86,230,.10) 0%,rgba(59,108,255,.05) 100%);
   border:1px solid rgba(59,108,255,.24);
 }
+.mc-img{
+  display:block;width:100%;border-radius:14px;cursor:zoom-in;
+  border:1px solid rgba(59,108,255,.24);
+}
+#img-lightbox{
+  position:fixed;inset:0;background:rgba(8,12,26,.92);z-index:300;
+  display:none;align-items:center;justify-content:center;padding:20px;
+}
+#img-lightbox img{max-width:100%;max-height:100%;border-radius:10px;}
+#img-lightbox .lb-close{
+  position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:50%;
+  background:rgba(255,255,255,.15);color:#fff;border:none;font-size:18px;line-height:1;
+  display:flex;align-items:center;justify-content:center;cursor:pointer;
+}
 .mc-head{display:flex;align-items:center;gap:12px;}
 .mc-icon{
   flex-shrink:0;width:42px;height:42px;border-radius:12px;
@@ -905,7 +919,7 @@ video::-webkit-media-controls-fullscreen-button{display:none !important;}
       <span class="drawer-image-badge">参考样式 / 非本次大会内容</span>
     </div>
 
-    <p class="section-label">智能纪要</p>
+    <p class="section-label">智能纪要卡片</p>
     <div class="minutes-card" id="minutes-card"></div>
 
     <div class="drawer-actions">
@@ -913,6 +927,12 @@ video::-webkit-media-controls-fullscreen-button{display:none !important;}
       <button class="btn-back" id="drawer-back" type="button">返回继续浏览</button>
     </div>
   </div>
+</div>
+
+<!-- ===== 智能纪要卡片放大查看 ===== -->
+<div id="img-lightbox" role="dialog" aria-modal="true" aria-label="查看智能纪要卡片大图">
+  <button class="lb-close" id="img-lightbox-close" type="button" aria-label="关闭">×</button>
+  <img id="img-lightbox-img" alt="智能纪要卡片放大">
 </div>
 
 <!-- ===== 视频弹层 ===== -->
@@ -1593,28 +1613,34 @@ video::-webkit-media-controls-fullscreen-button{display:none !important;}
       $('drawer-image').removeAttribute('src');
     }
 
-    /* 智能纪要卡片：优先嘉宾级，回退场次级 */
+    /* 智能纪要卡片：优先嘉宾级，回退场次级；有原生图则展示图片 */
     var minutesCard = $('minutes-card');
-    var mt = speaker.minutesTitle || s.minutesTitle || '';
-    var md = speaker.minutesDuration || s.minutesDuration || '';
-    var mc = speaker.minutesCard || s.minutesCard || null;
-    var mcHtml =
-      '<div class="mc-head"><span class="mc-icon">' + ICONS.play + '</span>' +
-      '<div class="mc-titles"><p class="mc-title">' + esc(speaker.name) + '的智能纪要</p>' +
-      '<p class="mc-sub">由飞书智能会议纪要生成' + (md ? ' · ' + esc(md) : '') + '</p></div></div>';
-    if (mc && mc.sections && mc.sections.length) {
-      mc.sections.forEach(function (sec) {
-        mcHtml += '<div class="mc-sec"><p class="mc-sec-label">' + esc(sec.label) + '</p>' +
-          '<ul class="mc-sec-list">' + sec.items.map(function (it) { return '<li>' + esc(it) + '</li>'; }).join('') + '</ul></div>';
-      });
+    var mcImg = speaker.minutesCardImage || s.minutesCardImage || '';
+    if (mcImg) {
+      minutesCard.innerHTML =
+        '<img class="mc-img" id="mc-img" src="' + mcImg + '" alt="' + esc(speaker.name) + '的智能纪要卡片" loading="lazy">';
     } else {
-      var tags = (speaker.minutesTags && speaker.minutesTags.length) ? speaker.minutesTags
-                : ((s.minutesTags && s.minutesTags.length) ? s.minutesTags : []);
-      if (tags.length) {
-        mcHtml += '<div class="mc-tags">' + tags.slice(0, 4).map(function (t) { return '<span class="mc-tag">' + esc(t) + '</span>'; }).join('') + '</div>';
+      var mt = speaker.minutesTitle || s.minutesTitle || '';
+      var md = speaker.minutesDuration || s.minutesDuration || '';
+      var mc = speaker.minutesCard || s.minutesCard || null;
+      var mcHtml =
+        '<div class="mc-head"><span class="mc-icon">' + ICONS.play + '</span>' +
+        '<div class="mc-titles"><p class="mc-title">' + esc(speaker.name) + '的智能纪要</p>' +
+        '<p class="mc-sub">由飞书智能会议纪要生成' + (md ? ' · ' + esc(md) : '') + '</p></div></div>';
+      if (mc && mc.sections && mc.sections.length) {
+        mc.sections.forEach(function (sec) {
+          mcHtml += '<div class="mc-sec"><p class="mc-sec-label">' + esc(sec.label) + '</p>' +
+            '<ul class="mc-sec-list">' + sec.items.map(function (it) { return '<li>' + esc(it) + '</li>'; }).join('') + '</ul></div>';
+        });
+      } else {
+        var tags = (speaker.minutesTags && speaker.minutesTags.length) ? speaker.minutesTags
+                  : ((s.minutesTags && s.minutesTags.length) ? s.minutesTags : []);
+        if (tags.length) {
+          mcHtml += '<div class="mc-tags">' + tags.slice(0, 4).map(function (t) { return '<span class="mc-tag">' + esc(t) + '</span>'; }).join('') + '</div>';
+        }
       }
+      minutesCard.innerHTML = mcHtml;
     }
-    minutesCard.innerHTML = mcHtml;
 
     var btn = $('drawer-minutes');
     var minutesUrl = speaker.minutesUrl || s.minutesUrl || '';
@@ -1649,6 +1675,26 @@ video::-webkit-media-controls-fullscreen-button{display:none !important;}
   $('drawer-close').addEventListener('click', closeDrawer);
   $('drawer-back').addEventListener('click', closeDrawer);
   drawerBackdrop.addEventListener('click', closeDrawer);
+
+  /* 智能纪要卡片点击放大 */
+  var lightboxEl = $('img-lightbox');
+  function openLightbox(src) {
+    if (!src) return;
+    $('img-lightbox-img').src = src;
+    lightboxEl.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    lightboxEl.style.display = 'none';
+    $('img-lightbox-img').removeAttribute('src');
+    document.body.style.overflow = '';
+  }
+  $('minutes-card').addEventListener('click', function (e) {
+    var img = e.target.closest('.mc-img');
+    if (img) openLightbox(img.src);
+  });
+  lightboxEl.addEventListener('click', closeLightbox);
+  $('img-lightbox-close').addEventListener('click', closeLightbox);
 
   $('drawer-minutes').addEventListener('click', function () {
     if (!lastSession) return;
