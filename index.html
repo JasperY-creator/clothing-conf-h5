@@ -503,6 +503,20 @@ button{font-family:inherit;border:none;background:none;cursor:pointer;color:inhe
   font-size:12px;color:#3B6CFF;background:rgba(59,108,255,.12);
   border-radius:999px;padding:4px 10px;
 }
+.mc-sec{margin-top:16px;padding-top:14px;border-top:1px dashed rgba(59,108,255,.18);}
+.mc-sec-label{
+  display:inline-block;font-size:13px;font-weight:600;color:#2456E6;
+  background:rgba(59,108,255,.10);border-radius:6px;padding:3px 10px;
+}
+.mc-sec-list{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-direction:column;gap:8px;}
+.mc-sec-list li{
+  position:relative;padding-left:14px;
+  font-size:13px;line-height:1.55;color:var(--text);
+}
+.mc-sec-list li::before{
+  content:'';position:absolute;left:0;top:8px;
+  width:5px;height:5px;border-radius:50%;background:var(--blue);
+}
 .drawer-actions{margin-top:24px;display:flex;flex-direction:column;gap:6px;}
 .drawer-actions .btn-primary{min-height:48px;}
 .drawer-actions .btn-back{min-height:44px;color:var(--text-2);font-size:15px;font-weight:500;}
@@ -1583,14 +1597,22 @@ video::-webkit-media-controls-fullscreen-button{display:none !important;}
     var minutesCard = $('minutes-card');
     var mt = speaker.minutesTitle || s.minutesTitle || '';
     var md = speaker.minutesDuration || s.minutesDuration || '';
-    var tags = (speaker.minutesTags && speaker.minutesTags.length) ? speaker.minutesTags
-              : ((s.minutesTags && s.minutesTags.length) ? s.minutesTags : []);
+    var mc = speaker.minutesCard || s.minutesCard || null;
     var mcHtml =
       '<div class="mc-head"><span class="mc-icon">' + ICONS.play + '</span>' +
       '<div class="mc-titles"><p class="mc-title">' + esc(speaker.name) + '的智能纪要</p>' +
       '<p class="mc-sub">由飞书智能会议纪要生成' + (md ? ' · ' + esc(md) : '') + '</p></div></div>';
-    if (tags.length) {
-      mcHtml += '<div class="mc-tags">' + tags.slice(0, 4).map(function (t) { return '<span class="mc-tag">' + esc(t) + '</span>'; }).join('') + '</div>';
+    if (mc && mc.sections && mc.sections.length) {
+      mc.sections.forEach(function (sec) {
+        mcHtml += '<div class="mc-sec"><p class="mc-sec-label">' + esc(sec.label) + '</p>' +
+          '<ul class="mc-sec-list">' + sec.items.map(function (it) { return '<li>' + esc(it) + '</li>'; }).join('') + '</ul></div>';
+      });
+    } else {
+      var tags = (speaker.minutesTags && speaker.minutesTags.length) ? speaker.minutesTags
+                : ((s.minutesTags && s.minutesTags.length) ? s.minutesTags : []);
+      if (tags.length) {
+        mcHtml += '<div class="mc-tags">' + tags.slice(0, 4).map(function (t) { return '<span class="mc-tag">' + esc(t) + '</span>'; }).join('') + '</div>';
+      }
     }
     minutesCard.innerHTML = mcHtml;
 
