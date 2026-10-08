@@ -483,26 +483,26 @@ button{font-family:inherit;border:none;background:none;cursor:pointer;color:inhe
   display:flex;align-items:center;justify-content:center;margin-top:2px;
 }
 .summary-text{font-size:15px;line-height:1.6;color:var(--text);}
-.frag-list{display:flex;flex-direction:column;gap:10px;}
-.frag-item{
-  display:flex;align-items:center;gap:12px;
-  background:var(--bg-soft);border-radius:10px;padding:12px 14px;
+.minutes-card{
+  display:block;border-radius:14px;padding:16px 16px 14px;
+  background:linear-gradient(135deg,rgba(36,86,230,.10) 0%,rgba(59,108,255,.05) 100%);
+  border:1px solid rgba(59,108,255,.24);
 }
-.frag-item .frag-play{
-  width:36px;height:36px;flex-shrink:0;border-radius:50%;
-  background:var(--blue-soft);color:var(--blue);
-  display:flex;align-items:center;justify-content:center;
+.mc-head{display:flex;align-items:center;gap:12px;}
+.mc-icon{
+  flex-shrink:0;width:42px;height:42px;border-radius:12px;
+  background:linear-gradient(135deg,#2456E6 0%,#3B6CFF 100%);
+  display:inline-flex;align-items:center;justify-content:center;color:#fff;
 }
-.frag-item.disabled .frag-play{background:#EEF0F3;color:var(--text-3);}
-.frag-item.disabled{opacity:.75;}
-.frag-info{flex:1;min-width:0;}
-.frag-title{font-size:14px;font-weight:500;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.frag-time{font-size:12px;color:var(--text-3);margin-top:2px;}
-.drawer-source{
-  margin-top:16px;display:flex;align-items:center;gap:8px;
-  font-size:13px;color:var(--text-2);
+.mc-icon svg{width:18px;height:18px;}
+.mc-titles{flex:1;min-width:0;}
+.mc-title{font-size:15px;font-weight:600;color:var(--text);line-height:1.35;}
+.mc-sub{font-size:12px;color:var(--text-2);margin-top:3px;line-height:1.4;}
+.mc-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
+.mc-tag{
+  font-size:12px;color:#3B6CFF;background:rgba(59,108,255,.12);
+  border-radius:999px;padding:4px 10px;
 }
-.drawer-source .src-dot{width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0;}
 .drawer-actions{margin-top:24px;display:flex;flex-direction:column;gap:6px;}
 .drawer-actions .btn-primary{min-height:48px;}
 .drawer-actions .btn-back{min-height:44px;color:var(--text-2);font-size:15px;font-weight:500;}
@@ -596,7 +596,7 @@ video::-webkit-media-controls-fullscreen-button{display:none !important;}
 /* ===== 标题断行均衡：避免两三个字单独成行 ===== */
 .hero-title,.section-title,.drawer-title,.consult-title,.bridge-copy,
 .ability-name,.brand-card-title,.take-title,.ammo-title,.doc-entry-title,
-.frag-title,.drawer-track-chip,label.title,label.sub{
+.mc-title,.drawer-track-chip,label.title,label.sub{
   text-wrap:balance;
 }
 
@@ -891,10 +891,9 @@ video::-webkit-media-controls-fullscreen-button{display:none !important;}
       <span class="drawer-image-badge">参考样式 / 非本次大会内容</span>
     </div>
 
-    <p class="section-label">会议妙记片段</p>
-    <div class="frag-list" id="frag-list"></div>
+    <p class="section-label">智能纪要</p>
+    <div class="minutes-card" id="minutes-card"></div>
 
-    <p class="drawer-source"><span class="src-dot"></span>由飞书智能会议纪要生成</p>
     <div class="drawer-actions">
       <button class="btn-primary" id="drawer-minutes" type="button"></button>
       <button class="btn-back" id="drawer-back" type="button">返回继续浏览</button>
@@ -1580,26 +1579,20 @@ video::-webkit-media-controls-fullscreen-button{display:none !important;}
       $('drawer-image').removeAttribute('src');
     }
 
-    /* 会议妙记片段链接：优先嘉宾级，回退场次级 */
-    var fragList = $('frag-list');
-    var fragHtml = '';
-    if (isPlaceholder) {
-      fragHtml =
-        '<div class="frag-item disabled"><span class="frag-play">' + ICONS.play + '</span><div class="frag-info"><p class="frag-title">片段将在大会后更新</p><p class="frag-time">正式纪要生成后可跳转定位</p></div></div>';
-    } else {
-      var frags = (speaker.minutesFragments && speaker.minutesFragments.length) ? speaker.minutesFragments
-                : ((s.minutesFragments && s.minutesFragments.length) ? s.minutesFragments : []);
-      if (frags.length === 0) {
-        fragHtml = '<div class="frag-item disabled"><span class="frag-play">' + ICONS.play + '</span><div class="frag-info"><p class="frag-title">暂无片段</p></div></div>';
-      } else {
-        frags.forEach(function (f, i) {
-          fragHtml +=
-            '<div class="frag-item" data-frag-index="' + i + '"><span class="frag-play">' + ICONS.play + '</span>' +
-            '<div class="frag-info"><p class="frag-title">' + esc(f.title) + '</p><p class="frag-time">' + esc(f.time || '') + '</p></div></div>';
-        });
-      }
+    /* 智能纪要卡片：优先嘉宾级，回退场次级 */
+    var minutesCard = $('minutes-card');
+    var mt = speaker.minutesTitle || s.minutesTitle || '';
+    var md = speaker.minutesDuration || s.minutesDuration || '';
+    var tags = (speaker.minutesTags && speaker.minutesTags.length) ? speaker.minutesTags
+              : ((s.minutesTags && s.minutesTags.length) ? s.minutesTags : []);
+    var mcHtml =
+      '<div class="mc-head"><span class="mc-icon">' + ICONS.play + '</span>' +
+      '<div class="mc-titles"><p class="mc-title">' + esc(speaker.name) + '的智能纪要</p>' +
+      '<p class="mc-sub">由飞书智能会议纪要生成' + (md ? ' · ' + esc(md) : '') + '</p></div></div>';
+    if (tags.length) {
+      mcHtml += '<div class="mc-tags">' + tags.slice(0, 4).map(function (t) { return '<span class="mc-tag">' + esc(t) + '</span>'; }).join('') + '</div>';
     }
-    fragList.innerHTML = fragHtml;
+    minutesCard.innerHTML = mcHtml;
 
     var btn = $('drawer-minutes');
     var minutesUrl = speaker.minutesUrl || s.minutesUrl || '';
@@ -1647,20 +1640,6 @@ video::-webkit-media-controls-fullscreen-button{display:none !important;}
     }
     trackEvent('minutes_click', { session_id: lastSession.id, speaker: speaker.name, status: DATA.status });
     window.location.href = minutesUrl;
-  });
-
-  $('frag-list').addEventListener('click', function (e) {
-    var item = e.target.closest('.frag-item');
-    if (!item || item.classList.contains('disabled') || !lastSession) return;
-    var idx = item.getAttribute('data-frag-index');
-    if (idx === null) return;
-    var speaker = getSpeakers(lastSession)[lastSpeakerIdx] || {};
-    var frags = (speaker.minutesFragments && speaker.minutesFragments.length) ? speaker.minutesFragments
-              : (lastSession.minutesFragments || []);
-    var f = frags[parseInt(idx, 10)];
-    if (!f || !f.url) { showToast('正式纪要将在大会后更新'); return; }
-    trackEvent('minutes_click', { session_id: lastSession.id, speaker: speaker.name, status: DATA.status, fragment: f.title });
-    window.location.href = f.url;
   });
 
   /* 下滑关闭（移动端） */
