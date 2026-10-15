@@ -19,20 +19,20 @@
       "id": "product_video",
       "title": "飞书智能会议纪要产品视频",
       "duration": "60—90 秒",
-      "url": "https://aka.doubaocdn.com/s/SXiDCkdq3H",
-      "poster": "https://aka.doubaocdn.com/s/RiQNEEv13T"
+      "url": "https://jaspery-creator.github.io/clothing-conf-h5/assets/feishu-minutes-720.mp4",
+      "poster": "https://jaspery-creator.github.io/clothing-conf-h5/img/feishu-minutes-poster.jpg"
     },
     {
       "id": "entrepreneur",
       "title": "《企业家谈飞书》",
-      "url": "https://aka.doubaocdn.com/s/No0i4aHcrN",
-      "poster": "https://aka.doubaocdn.com/s/l03EpjwFaV"
+      "url": "https://jaspery-creator.github.io/clothing-conf-h5/assets/entrepreneur-1080.mp4",
+      "poster": "https://jaspery-creator.github.io/clothing-conf-h5/assets/entrepreneur-poster.jpg"
     },
     {
       "id": "doubao_launch",
       "title": "豆包工作发布视频",
-      "url": "https://aka.doubaocdn.com/s/6N3p2pNuzx",
-      "poster": "https://aka.doubaocdn.com/s/xezNsGG4q6"
+      "url": "https://jaspery-creator.github.io/clothing-conf-h5/assets/doubao-launch-1080.mp4",
+      "poster": "https://jaspery-creator.github.io/clothing-conf-h5/assets/doubao-launch-poster.jpg"
     }
   ],
   "features": [
@@ -206,7 +206,7 @@
               "role": "中国纺织工业联合会副会长、中国服装协会会长",
               "minutesUrl": "https://bytedance.larkoffice.com/minutes/obcnn8g18qu67s8qq86f47mj",
               "minutesFragments": [],
-              "placeholderImage": "https://aka.doubaocdn.com/s/boQs3obXfz",
+              "placeholderImage": "https://jaspery-creator.github.io/clothing-conf-h5/assets/ph1-web.jpg",
               "minutesTitle": "826-泽楠分享",
               "minutesDuration": "37 分 48 秒",
               "minutesTags": [
@@ -250,7 +250,7 @@
                   }
                 ]
               },
-              "minutesCardImage": "https://aka.doubaocdn.com/s/SQZ1hMj4Dy"
+              "minutesCardImage": "https://jaspery-creator.github.io/clothing-conf-h5/img/meeting-card.png"
             }
           ],
           "time": "09:15—09:45",
@@ -261,7 +261,7 @@
           ],
           "minutesUrl": "",
           "minutesFragments": [],
-          "placeholderImage": "https://aka.doubaocdn.com/s/boQs3obXfz"
+          "placeholderImage": "https://jaspery-creator.github.io/clothing-conf-h5/assets/ph1-web.jpg"
         },
         {
           "id": "session-t2",
@@ -272,21 +272,21 @@
               "role": "长江商学院客座教授、前京东集团副总裁、前云南白药首席商务官",
               "minutesUrl": "",
               "minutesFragments": [],
-              "placeholderImage": "https://aka.doubaocdn.com/s/boQs3obXfz"
+              "placeholderImage": "https://jaspery-creator.github.io/clothing-conf-h5/assets/ph1-web.jpg"
             },
             {
               "name": "杨大筠",
               "role": "优他国际品牌投资管理有限公司总裁",
               "minutesUrl": "",
               "minutesFragments": [],
-              "placeholderImage": "https://aka.doubaocdn.com/s/boQs3obXfz"
+              "placeholderImage": "https://jaspery-creator.github.io/clothing-conf-h5/assets/ph1-web.jpg"
             },
             {
               "name": "闻力生",
               "role": "中国服装协会顾问、东华大学教授",
               "minutesUrl": "",
               "minutesFragments": [],
-              "placeholderImage": "https://aka.doubaocdn.com/s/boQs3obXfz"
+              "placeholderImage": "https://jaspery-creator.github.io/clothing-conf-h5/assets/ph1-web.jpg"
             }
           ],
           "time": "09:45—11:00",
@@ -297,7 +297,7 @@
           ],
           "minutesUrl": "",
           "minutesFragments": [],
-          "placeholderImage": "https://aka.doubaocdn.com/s/boQs3obXfz"
+          "placeholderImage": "https://jaspery-creator.github.io/clothing-conf-h5/assets/ph1-web.jpg"
         },
         {
           "id": "session-t3",
@@ -308,7 +308,7 @@
               "role": "中国纺织工业联合会党委书记、会长",
               "minutesUrl": "",
               "minutesFragments": [],
-              "placeholderImage": "https://aka.doubaocdn.com/s/boQs3obXfz"
+              "placeholderImage": "https://jaspery-creator.github.io/clothing-conf-h5/assets/ph1-web.jpg"
             }
           ],
           "time": "11:35—12:00",
@@ -319,7 +319,7 @@
           ],
           "minutesUrl": "",
           "minutesFragments": [],
-          "placeholderImage": "https://aka.doubaocdn.com/s/boQs3obXfz"
+          "placeholderImage": "https://jaspery-creator.github.io/clothing-conf-h5/assets/ph1-web.jpg"
         }
       ]
     },
@@ -337,42 +337,42 @@
               "role": "广东天昕时尚科技创始人（前抖音电商服饰行业&整合营销负责人）",
               "minutesUrl": "",
               "minutesFragments": [],
-              "placeholderImage": "https://aka.doubaocdn.com/s/j9vLhYyuV8"
+              "placeholderImage": "https://jaspery-creator.github.io/clothing-conf-h5/assets/ph3-web.jpg"
             },
             {
               "name": "李晨",
               "role": "NPC品牌创始人",
               "minutesUrl": "",
               "minutesFragments": [],
-              "placeholderImage": "https://aka.doubaocdn.com/s/j9vLhYyuV8"
+              "placeholderImage": "https://jaspery-creator.github.io/clothing-conf-h5/assets/ph3-web.jpg"
             },
             {
               "name": "刘丽娜",
               "role": "东黎羊绒品牌总经理、主理人",
               "minutesUrl": "",
               "minutesFragments": [],
-              "placeholderImage": "https://aka.doubaocdn.com/s/j9vLhYyuV8"
+              "placeholderImage": "https://jaspery-creator.github.io/clothing-conf-h5/assets/ph3-web.jpg"
             },
             {
               "name": "郭冬麒",
               "role": "OCTERRA等线品牌创始人",
               "minutesUrl": "",
               "minutesFragments": [],
-              "placeholderImage": "https://aka.doubaocdn.com/s/j9vLhYyuV8"
+              "placeholderImage": "https://jaspery-creator.github.io/clothing-conf-h5/assets/ph3-web.jpg"
             },
             {
               "name": "孙逸文",
               "role": "SVG Golf总经理",
               "minutesUrl": "",
               "minutesFragments": [],
-              "placeholderImage": "https://aka.doubaocdn.com/s/j9vLhYyuV8"
+              "placeholderImage": "https://jaspery-creator.github.io/clothing-conf-h5/assets/ph3-web.jpg"
             },
             {
               "name": "周立言",
               "role": "荷言HEYEN品牌创始人",
               "minutesUrl": "",
               "minutesFragments": [],
-              "placeholderImage": "https://aka.doubaocdn.com/s/j9vLhYyuV8"
+              "placeholderImage": "https://jaspery-creator.github.io/clothing-conf-h5/assets/ph3-web.jpg"
             }
           ],
           "time": "14:00—15:15",
@@ -383,7 +383,7 @@
           ],
           "minutesUrl": "",
           "minutesFragments": [],
-          "placeholderImage": "https://aka.doubaocdn.com/s/j9vLhYyuV8"
+          "placeholderImage": "https://jaspery-creator.github.io/clothing-conf-h5/assets/ph3-web.jpg"
         }
       ]
     },
@@ -401,49 +401,49 @@
               "role": "希疆新零售研究院院长，著名新零售战略专家",
               "minutesUrl": "",
               "minutesFragments": [],
-              "placeholderImage": "https://aka.doubaocdn.com/s/bgU9S2JwOu"
+              "placeholderImage": "https://jaspery-creator.github.io/clothing-conf-h5/assets/ph2-web.jpg"
             },
             {
               "name": "章洁霏",
               "role": "深圳全棉时代科技有限公司供应链高级总监",
               "minutesUrl": "",
               "minutesFragments": [],
-              "placeholderImage": "https://aka.doubaocdn.com/s/bgU9S2JwOu"
+              "placeholderImage": "https://jaspery-creator.github.io/clothing-conf-h5/assets/ph2-web.jpg"
             },
             {
               "name": "鲁小湘",
               "role": "法良时装（上海）有限公司董事长、总经理",
               "minutesUrl": "",
               "minutesFragments": [],
-              "placeholderImage": "https://aka.doubaocdn.com/s/bgU9S2JwOu"
+              "placeholderImage": "https://jaspery-creator.github.io/clothing-conf-h5/assets/ph2-web.jpg"
             },
             {
               "name": "夏巍",
               "role": "青岛久良服饰有限公司董事长、品牌主理人",
               "minutesUrl": "",
               "minutesFragments": [],
-              "placeholderImage": "https://aka.doubaocdn.com/s/bgU9S2JwOu"
+              "placeholderImage": "https://jaspery-creator.github.io/clothing-conf-h5/assets/ph2-web.jpg"
             },
             {
               "name": "王文丽",
               "role": "杭州中织轻链人工智能科技有限责任公司董事长、纺织服装产业AI变革者",
               "minutesUrl": "",
               "minutesFragments": [],
-              "placeholderImage": "https://aka.doubaocdn.com/s/bgU9S2JwOu"
+              "placeholderImage": "https://jaspery-creator.github.io/clothing-conf-h5/assets/ph2-web.jpg"
             },
             {
               "name": "王春元",
               "role": "杰克科技股份有限公司全球战略客户部专属总经理",
               "minutesUrl": "",
               "minutesFragments": [],
-              "placeholderImage": "https://aka.doubaocdn.com/s/bgU9S2JwOu"
+              "placeholderImage": "https://jaspery-creator.github.io/clothing-conf-h5/assets/ph2-web.jpg"
             },
             {
               "name": "陈杰",
               "role": "杭州领猫信息科技有限公司创始人、CEO",
               "minutesUrl": "",
               "minutesFragments": [],
-              "placeholderImage": "https://aka.doubaocdn.com/s/bgU9S2JwOu"
+              "placeholderImage": "https://jaspery-creator.github.io/clothing-conf-h5/assets/ph2-web.jpg"
             }
           ],
           "time": "15:15—16:30",
@@ -454,7 +454,7 @@
           ],
           "minutesUrl": "",
           "minutesFragments": [],
-          "placeholderImage": "https://aka.doubaocdn.com/s/bgU9S2JwOu"
+          "placeholderImage": "https://jaspery-creator.github.io/clothing-conf-h5/assets/ph2-web.jpg"
         }
       ]
     }
